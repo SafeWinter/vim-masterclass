@@ -27,4 +27,10 @@
 > $ git config --global alias.acp '!git add * && git commit -m \"$1\" && git push'
 > ```
 >
-> 但这样配置后，前两个命令能正常运行，但 `git push` 始终会把我的注释内容理解成要推送的目标分支。
+> 但这样配置后，前两个命令能正常运行，但 `git push` 始终会把我的注释内容理解成要推送的目标分支。为了让 `git push` 忽略最后的注释，再尝试：
+>
+> ```shell
+> $ git config --global alias.acp '!git add * && git commit -m \"$1\" && git push # '
+> ```
+>
+> 就是说，让后面的参数在执行时变成一段 `shell` 脚本注释。经测试，果然能行。以后类似的情况都能应对了。
