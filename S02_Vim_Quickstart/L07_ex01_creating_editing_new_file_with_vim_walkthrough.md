@@ -34,3 +34,28 @@
 > ```
 >
 > 就是说，让后面的参数在执行时变成一段 `shell` 脚本注释。经测试，果然能行。以后类似的情况都能应对了。
+>
+> 其实这个别名的第一版是问的 ChatGPT，但 `git push` 报错后，ChatGPT 分析原因为“Git 不支持在别名中直接传递参数”，建议我通过 `.bat` 批处理任务实现。试了几次，好歹调通了：
+>
+> ```bat
+> # file path: {GIT_HOME}\cmd\git-acp.bat
+> @echo off
+> git add *
+> git commit -m %1
+> git push
+> ```
+>
+> 但这样写效率很低：又要创建文件，又要配置环境变量，运行的格式还必须是 `git-acp 'some comment'`，后面要修改命令更麻烦，没法使用 git 的内置命令。这样写还不如写成 PowerShell 的脚本：
+>
+> ```shell
+> # git-acp.ps1
+> param(
+>     [string]$Comment = ""
+> )
+> cd "$(pwd)"
+> git add *
+> git commit -m "diy commit: $Comment"
+> git push
+> ```
+>
+> 感觉越来越跑偏了……本来加个 `<空格>#<空格>` 就解决的，被 ChatGPT 这么一带就搞错大方向了。可见提高效率的关键还是在于自己的思考和积累。
