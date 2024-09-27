@@ -1,19 +1,22 @@
 # L06 Exercise 01 Creating and Editing a New File with Vim
 ---
 
+【**注：本节练习另附精美排版 PDF 格式，阅读体验更佳，详见：vimclass/Exercise-01-CreatingandEditingaNewFilewithVim.pdf**】
 
 
-***NOTE: For easier to read instructions download the PDF resource attached to this lesson.***
 
-## **Creating and Editing a New File with Vim**
+## 训练目标
 
-### ***Goal:***
+- 练习用 vim 创建文件、编辑文件。
+- 练习 vim 三大模式的切换：常规模式（normal mode）、插入模式（insert mode）、命令行模式（commandline / cmdline / line mode）
 
-The goal of this exercise is to practice creating files and editing them in vim.  You'll also practice changing between the normal mode, insert mode, and command mode.  During this practice exercise you will create a new file with vim, insert some text into that file, and save it.
+练习过程中，您将使用 vim 创建一个新文件，并输入一些内容，最后保存。
 
-### ***Instructions:***
 
-#### **Create a file**
+
+## 操作指令
+
+### 1 创建文件
 
 First, start a command line session on your local machine.  Next, use vim to edit a new file named myday.txt.  To do that type, **vim myday.txt** at the command line and press `<ENTER>`.
 
@@ -21,23 +24,23 @@ First, start a command line session on your local machine.  Next, use vim to edi
 $ vim myday.txt
 ```
 
-#### **Enter insert mode**
+### 2 启用插入模式
 
 You now have a new file opened and you're placed into normal mode.  Press lowercase **i** to enter the insert mode.
 
-#### **Add some text to the file**
+### 3 给文件添加些文字
 
 Next, start typing.  Write a few sentences about the beginning of your day.  If you make a mistake while you're typing, you can press the backspace key to correct any errors.
 
-#### **Continue adding text to the file**
+### 4 继续添加文字内容
 
 Continue adding text to the file by typing three things you're grateful for.  Once you're done typing, press Escape to enter normal mode.
 
-#### **Save the file**
+### 5 保存文件
 
 Next save your changes.  You should already be in normal mode, but if you're not sure you can also press the Escape key again to be sure you are in normal mode.  Next, type **`:wq<ENTER>`** to save the file and exit vim.
 
-#### **Verify the file was saved**
+### 6 验证文件已保存
 
 You can verify that you've saved your changes by looking at the contents of the file.  One way to do that is to use the vim editor to open the file.  Type **`vim myday.txt<ENTER>`**.
 
