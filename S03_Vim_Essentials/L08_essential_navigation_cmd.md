@@ -11,19 +11,19 @@
 
 记忆法：H在最左边，L最右，J似鱼钩，剩下K则向上
 
-
+abcd
 
 ## 2 上 / 下翻页
 
 上一页：<kbd>Ctrl + F</kbd>（**F**orward）
 
-下一页：<kbd>Ctrl + F</kbd>（**B**ackward）
+下一页：<kbd>Ctrl + B</kbd>（**B**ackward）
 
 
 
 ## 3 基于单词前移
 
-Vim 支持的文本对象：单词（words）、句子（sentences）、段落（paragraphs）、块（blocks）……
+Vim 支持的文本对象（text object）：单词（words）、句子（sentences）、段落（paragraphs）、块（blocks）……
 
 按单词前移：
 
@@ -45,7 +45,7 @@ Vim 中的单词：即一个 **非空的字符序列**
 
 ## 5 重新定位视图中的文本（页面重绘）
 
-页面重绘：<kbd>z + Enter</kbd>
+页面重绘：<kbd>z</kbd> + <kbd>Enter</kbd>
 
 作用：将光标所在行调整至页面偏上的位置（具体偏上多少可以手动配置）。
 
@@ -62,7 +62,7 @@ Vim 中的单词：即一个 **非空的字符序列**
 
 - <kbd>gg</kbd>：前跟行号则到指定行；单独使用则定位到 **第一行**；
 - <kbd>G</kbd>：前跟行号则到指定行；单独使用则定位到 **最后一行**；
-- <kbd>:</kbd><kbd>lineNum</kbd><kbd>Enter</kbd>：命令行模式下，冒号+目标行号，回车即定位到指定行
+- <kbd>:</kbd><kbd>LineNumber</kbd><kbd>Enter</kbd>：命令行模式下，冒号+目标行号，回车即定位到指定行
 
 例如：
 
@@ -79,7 +79,7 @@ Vim 中的单词：即一个 **非空的字符序列**
 
 缺点：不能实时刷新结果，需手动重算。
 
-改进：命令模式下启用 `ruler`：<kbd>:</kbd><kbd>set</kbd><kbd>Space</kbd><kbd>ruler</kbd><kbd>Enter</kbd>
+改进：命令模式下启用 `ruler`：<kbd>:set</kbd><kbd>Space</kbd><kbd>ruler</kbd><kbd>Enter</kbd> 
 
 实测效果：（支持状态信息实时更新）
 
@@ -89,7 +89,7 @@ Vim 中的单词：即一个 **非空的字符序列**
 
 ![Ctrl + g with ruler enabled](../assets/8-4.png)
 
-禁用 `ruler`：<kbd>:</kbd><kbd>set</kbd><kbd>Space</kbd><kbd>noruler</kbd><kbd>Enter</kbd>
+禁用 `ruler`：<kbd>:set</kbd><kbd>Space</kbd><kbd>noruler</kbd><kbd>Enter</kbd>
 
 > [!tip]
 >
