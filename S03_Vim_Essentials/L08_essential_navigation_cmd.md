@@ -15,9 +15,9 @@ abcd
 
 ## 2 上 / 下翻页
 
-上一页：<kbd>Ctrl + F</kbd>（**F**orward）
+上一页：<kbd>Ctrl</kbd> + <kbd>F</kbd>（**F**orward）
 
-下一页：<kbd>Ctrl + B</kbd>（**B**ackward）
+下一页：<kbd>Ctrl</kbd> + <kbd>B</kbd>（**B**ackward）
 
 
 
@@ -79,22 +79,22 @@ Vim 中的单词：即一个 **非空的字符序列**
 
 缺点：不能实时刷新结果，需手动重算。
 
-改进：命令模式下启用 `ruler`：<kbd>:set</kbd><kbd>Space</kbd><kbd>ruler</kbd><kbd>Enter</kbd> 
+改进：命令模式下启用 `ruler`：<kbd>:set ruler</kbd><kbd>Enter</kbd> 
 
 实测效果：（支持状态信息实时更新）
 
 ![enable ruler under line mode](../assets/8-3.png)
 
-此时再用 <kbd>Ctrl</kbd><kbd>g</kbd>，则显示：
+此时再用 <kbd>Ctrl</kbd> + <kbd>G</kbd>，则显示：
 
 ![Ctrl + g with ruler enabled](../assets/8-4.png)
 
-禁用 `ruler`：<kbd>:set</kbd><kbd>Space</kbd><kbd>noruler</kbd><kbd>Enter</kbd>
+禁用 `ruler`：<kbd>:set noruler</kbd><kbd>Enter</kbd>
 
 > [!tip]
 >
 > Vim 命令模式中的配置项，激活与禁用都有固定格式——
 >
-> - 激活：`:set [option_name]`
+> - 启用：`:set [option_name]`
 > - 禁用：`:set no[option_name]`
 > - 切换：`:set [option_name]!`（开/关，取反操作，逻辑非）
