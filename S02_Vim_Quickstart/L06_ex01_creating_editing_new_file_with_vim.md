@@ -1,8 +1,6 @@
 # L06 Exercise 01 Creating and Editing a New File with Vim
 ---
 
-【**注：本节练习另附精美排版 PDF 格式，阅读体验更佳，详见：vimclass/Exercise-01-CreatingandEditingaNewFilewithVim.pdf**】
-
 
 
 ## 训练目标
@@ -10,7 +8,7 @@
 - 练习用 vim 创建文件、编辑文件。
 - 练习 vim 三大模式的切换：常规模式（normal mode）、插入模式（insert mode）、命令行模式（commandline / cmdline / line mode）
 
-练习过程中，您将使用 vim 创建一个新文件，并输入一些内容，最后保存。
+练习过程中，您将使用 vim 创建一个新文件，并输入一些内容，最后保存。[^1]
 
 
 
@@ -18,34 +16,51 @@
 
 ### 1 创建文件
 
-First, start a command line session on your local machine.  Next, use vim to edit a new file named myday.txt.  To do that type, **vim myday.txt** at the command line and press `<ENTER>`.
+先在本地打开一个命令行会话，再用 Vim 编辑一个名为 `myday.txt` 的新文件。在命令行输入 `vim myday.txt`，按回车键 <kbd>Enter</kbd> 确认：
 
 ```bash
-$ vim myday.txt
+vim myday.txt
 ```
+
+
 
 ### 2 启用插入模式
 
-You now have a new file opened and you're placed into normal mode.  Press lowercase **i** to enter the insert mode.
+这样就打开了一个新文件，并处在 Vim 的常规模式（normal mode）下。按下小写的 <kbd>I</kbd> 键进入插入模式（insert mode）
+
+
 
 ### 3 给文件添加些文字
 
-Next, start typing.  Write a few sentences about the beginning of your day.  If you make a mistake while you're typing, you can press the backspace key to correct any errors.
+接下来输入一些内容。比如写几句话来描述您一天的开始。输入过程中如果写错了，可以用退格键 <kbd>Backspace</kbd> 进行更正。
+
+
 
 ### 4 继续添加文字内容
 
-Continue adding text to the file by typing three things you're grateful for.  Once you're done typing, press Escape to enter normal mode.
+继续向文件添加文本，输入三件让您心怀感激的事物。写完后，按 <kbd>Esc</kbd> 键返回常规模式。
+
+
 
 ### 5 保存文件
 
-Next save your changes.  You should already be in normal mode, but if you're not sure you can also press the Escape key again to be sure you are in normal mode.  Next, type **`:wq<ENTER>`** to save the file and exit vim.
+接着保存您的变更内容。这需要在常规模式下进行。若不确定是否在常规模式，可以再按一次 <kbd>Esc</kbd> 键进行确认。下一步，输入 `:wq` + <kbd>Enter</kbd> 保存文件并退出 Vim。
+
+
 
 ### 6 验证文件已保存
 
-You can verify that you've saved your changes by looking at the contents of the file.  One way to do that is to use the vim editor to open the file.  Type **`vim myday.txt<ENTER>`**.
+您可以通过查看文件内容来确认是否已经保存成功。比如使用 Vim 编辑器打开该文件：输入 `vim myday.txt` + <kbd>Enter</kbd> 即可：
 
 ```bash
-$ vim myday.txt
+vim myday.txt
 ```
 
-You'll now see what you typed and saved into the file.  Because we aren't making any changes and don't want to save any changes, we can exit with **`:q!<ENTER>`**.
+这样就能看到您输入并保存到文件中的内容。由于未做任何修改，也没有什么需要保存的变更内容，直接使用 `:q!` + <kbd>Enter</kbd> 键退出即可。
+
+
+
+---
+
+[^1]: 本节练习另附精美排版 PDF 格式，阅读体验更佳，详见：`vimclass/Exercise-01-CreatingandEditingaNewFilewithVim.pdf`
+
