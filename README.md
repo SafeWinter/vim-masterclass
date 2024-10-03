@@ -91,19 +91,19 @@
 
 Status available：:heavy_check_mark: (Completed) | :hourglass_flowing_sand: (Working) | :no_entry: (Not Started) | :orange_book: (Finish Learning)
 
-| No.  |                 Chapter Title                  |       Status       |
-| :--: | :--------------------------------------------: | :----------------: |
-| S01  |              Course Introduction               | :heavy_check_mark: |
-| S02  |                 Vim Quickstart                 | :heavy_check_mark: |
-| S03  |                 Vim Essentials                 |   :orange_book:    |
-| S04  |              The Vim Help System               |   :orange_book:    |
-| S05  |         Deleting, Yanking, and Putting         |   :orange_book:    |
-| S06  |       Transforming and Substituting Text       |   :orange_book:    |
-| S07  |            Text Objects and Macros             |   :orange_book:    |
-| S08  |                  Visual Mode                   |   :orange_book:    |
-| S09  | Vim Settings, Preferences, and Customizations  |   :orange_book:    |
-| S10  |            Vim Buffers and Windows             |   :orange_book:    |
-| S11  |                  Vim Plugins                   |   :orange_book:    |
-| S12  | Vim Graphical User Interfaces: Gvim and MacVim |   :orange_book:    |
-| S13  |                 Live Q&A Calls                 |   :orange_book:    |
+| No.  |                 Chapter Title                  |          Status          |
+| :--: | :--------------------------------------------: | :----------------------: |
+| S01  |              Course Introduction               |    :heavy_check_mark:    |
+| S02  |                 Vim Quickstart                 |    :heavy_check_mark:    |
+| S03  |                 Vim Essentials                 |    :heavy_check_mark:    |
+| S04  |              The Vim Help System               | :hourglass_flowing_sand: |
+| S05  |         Deleting, Yanking, and Putting         |      :orange_book:       |
+| S06  |       Transforming and Substituting Text       |      :orange_book:       |
+| S07  |            Text Objects and Macros             |      :orange_book:       |
+| S08  |                  Visual Mode                   |      :orange_book:       |
+| S09  | Vim Settings, Preferences, and Customizations  |      :orange_book:       |
+| S10  |            Vim Buffers and Windows             |      :orange_book:       |
+| S11  |                  Vim Plugins                   |      :orange_book:       |
+| S12  | Vim Graphical User Interfaces: Gvim and MacVim |      :orange_book:       |
+| S13  |                 Live Q&A Calls                 |      :orange_book:       |
 
