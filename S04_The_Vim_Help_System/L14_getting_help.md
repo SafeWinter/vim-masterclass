@@ -47,7 +47,7 @@ Vim 帮助系统也是一个文本窗口，之前介绍的 <kbd>H</kbd><kbd>J</k
 
 ## 5 帮助文档间的上翻、下翻
 
-返回上一个帮助页：按 <kbd>Ctrl</kbd> + <kbd>O</kbd>
+返回上一个帮助页：按 <kbd>Ctrl</kbd> + <kbd>O</kbd>（即 `Old`，旧的主题）
 
 返回下一个帮助页：按 <kbd>Ctrl</kbd> + <kbd>I</kbd>
 
