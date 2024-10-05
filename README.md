@@ -96,8 +96,8 @@ Status available：:heavy_check_mark: (Completed) | :hourglass_flowing_sand: (Wo
 | S01  |              Course Introduction               |    :heavy_check_mark:    |
 | S02  |                 Vim Quickstart                 |    :heavy_check_mark:    |
 | S03  |                 Vim Essentials                 |    :heavy_check_mark:    |
-| S04  |              The Vim Help System               | :hourglass_flowing_sand: |
-| S05  |         Deleting, Yanking, and Putting         |      :orange_book:       |
+| S04  |              The Vim Help System               |    :heavy_check_mark:    |
+| S05  |         Deleting, Yanking, and Putting         | :hourglass_flowing_sand: |
 | S06  |       Transforming and Substituting Text       |      :orange_book:       |
 | S07  |            Text Objects and Macros             |      :orange_book:       |
 | S08  |                  Visual Mode                   |      :orange_book:       |
