@@ -94,15 +94,18 @@
 
 :star: 粘到上一行：<kbd>Y</kbd><kbd>Y</kbd><kbd>Shift</kbd><kbd>P</kbd>
 
-两者的区别：`yyp` 后，光标在原来位置的下一行，感觉被复制的文本在往上 :arrow_up: 走；`yyP` 后，光标还在原来的行上，感觉被复制的文本在往下 :arrow_down: 走。
+两者的区别：
 
-实测命令 `yyP`：
-
-![run yyP](../assets/17-1.png)
+- `yyp`：光标在原来位置的下一行，感觉被复制的文本在往上 :arrow_up: 走；
+- `yyP`：光标还在原来的行上，感觉被复制的文本在往下 :arrow_down: 走。
 
 实测命令 `yyp`：
 
 ![run yyp](../assets/17-2.png)
+
+实测命令 `yyP`：
+
+![run yyP](../assets/17-1.png)
 
 
 
@@ -110,7 +113,7 @@
 
 格式：`[count]yy`
 
-<kbd>4</kbd><kbd>Y</kbd><kbd>Y</kbd>：从光标所在行开始，复制本行及下方三行内容。
+<kbd>4</kbd><kbd>Y</kbd><kbd>Y</kbd>：从光标当前行开始（含当前行），下数 4 行内容进行复制。
 
 
 
