@@ -14,6 +14,8 @@ Vim 的关闭：<kbd>:</kbd><kbd>q</kbd><kbd>!</kbd><kbd>Enter</kbd>
 
 保存并退出 Vim：（正常模式下）<kbd>:</kbd><kbd>w</kbd><kbd>q</kbd><kbd>Enter</kbd>
 
-- `w`：write
-- `q`：quit
+其中：
+
+- `w`：write，写入、保存
+- `q`：quit，退出
 
