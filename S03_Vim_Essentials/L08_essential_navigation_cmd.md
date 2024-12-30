@@ -5,7 +5,9 @@
 
 ## 1 光标的上下左右移动
 
-![left down right up](../assets/8-1.png)
+![](../assets/8-1.png)
+
+**图 8.1 Vim 控制光标上下左右的键盘操作**
 
 即便键盘上的四个方向键失灵，`H`、`J`、`K`、`L` 依然有效。应当熟悉 Vim 控制方向的方式，双手不离主键盘。
 
@@ -23,14 +25,14 @@ abcd
 
 ## 3 基于单词前移
 
-Vim 支持的文本对象（text object）：单词（words）、句子（sentences）、段落（paragraphs）、块（blocks）……
+`Vim` 支持的文本对象（text object）：单词（words）、句子（sentences）、段落（paragraphs）、块（blocks）……
 
 按单词前移：
 
 - <kbd>w</kbd>：按单词逐个前移，标点也算一个独立的单词；
 - <kbd>W</kbd>：按单词逐个前移，标点不算独立的单词，予以忽略。改用 **空白** 作单词分隔符；
 
-Vim 中的单词：即一个 **非空的字符序列**
+`Vim` 中的单词：即一个 **非空的字符序列**
 
 
 
@@ -77,6 +79,8 @@ Vim 中的单词：即一个 **非空的字符序列**
 
 ![Ctrl + g](../assets/8-2.png)
 
+**图 8.2 组合键【Ctrl + g】用法示例**
+
 缺点：不能实时刷新结果，需手动重算。
 
 改进：命令模式下启用 `ruler`：<kbd>:set ruler</kbd><kbd>Enter</kbd> 
@@ -85,15 +89,19 @@ Vim 中的单词：即一个 **非空的字符序列**
 
 ![enable ruler under line mode](../assets/8-3.png)
 
+**图 8.3 命令模式下启用 ruler 展示状态信息**
+
 此时再用 <kbd>Ctrl</kbd> + <kbd>G</kbd>，则显示：
 
 ![Ctrl + g with ruler enabled](../assets/8-4.png)
+
+**图 8.4 启用 ruler 后的状态栏效果验证**
 
 禁用 `ruler`：<kbd>:set noruler</kbd><kbd>Enter</kbd>
 
 > [!tip]
 >
-> Vim 命令模式中的配置项，激活与禁用都有固定格式——
+> `Vim` 命令模式中的配置项，激活与禁用都有固定格式——
 >
 > - 启用：`:set [option_name]`
 > - 禁用：`:set no[option_name]`
