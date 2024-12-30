@@ -9,7 +9,7 @@
 
 ## 1 定位到行首非空字符，并启用插入模式
 
-按 <kbd>I</kbd>：相当于 <kbd>^</kbd> + <kbd>I</kbd>
+按 <kbd>Shift</kbd> + <kbd>I</kbd>：相当于 <kbd>^</kbd> + <kbd>I</kbd>
 
 
 
@@ -53,7 +53,7 @@
 
 实测效果：
 
-![](../../masterJsFp2/assets/21-1.png)
+![](../assets/21-1.png)
 
 
 
