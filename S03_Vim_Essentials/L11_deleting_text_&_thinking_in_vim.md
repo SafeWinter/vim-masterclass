@@ -15,7 +15,7 @@
 
 <kbd>DW</kbd>：删除一个单词 [^1]
 
-Vim 基本形式：**operation{motion}**（ **操作{移动}** ）——
+`Vim` 基本形式：**operation{motion}**（ **操作{移动}** ）——
 
 - 这里的 **操作** 即 <kbd>D</kbd>，表示 “**删除操作**”；
 - **移动** 即 <kbd>W</kbd>，这里表示 **一个单词的移动**。
@@ -71,11 +71,11 @@ Here is ano
 
 ### 2.3 推广3：大写的 <kbd>D</kbd>
 
-在 Vim 中，大写的 <kbd>D</kbd> 表示 <kbd>D$</kbd>，即删除当前光标及其后面所有的内容（在同一行上）
+在 `Vim` 中，大写的 <kbd>D</kbd>，即 <kbd>Shift</kbd> + <kbd>D</kbd>，等效于 <kbd>D$</kbd>，即删除当前光标及其后面所有的内容（在同一行上）
 
 
 
-可见，Vim 中要达到同一个目的，通常有很多操作方案，根据个人喜好选择即可。自己熟悉的操作才更容易记牢。
+可见，`Vim` 中要达到同一个目的，通常有很多操作方案，根据个人喜好选择即可。自己熟悉的操作才更容易记牢。
 
 
 
@@ -89,7 +89,7 @@ Here is ano
 
 按键：<kbd>3</kbd><kbd>D</kbd><kbd>D</kbd>
 
-由此出现了 Vim 的另一个基本形式：**[count]operation{motion}**（**[数量]操作{移动}**）——
+由此出现了 `Vim` 的另一个基本形式：**[count]operation{motion}**（**[数量]操作{移动}**）——
 
 <kbd>5</kbd><kbd>D</kbd><kbd>W</kbd>：
 
@@ -116,7 +116,7 @@ Here is ano
 
 ## 4 点操作符 <kbd>.</kbd>
 
-表示快速重复上一次操作。类似 MS Word 中的 <kbd>Ctrl</kbd> + <kbd>Y</kbd>。
+表示快速重复上一次操作（即 `Redo` 操作）。类似 `MS Word` 中的 <kbd>Ctrl</kbd> + <kbd>Y</kbd>。
 
 
 
@@ -126,7 +126,7 @@ Here is ano
 
 操作：`:w` + <kbd>Enter</kbd>
 
-执行完毕后仍在 Vim 常规模式下。
+执行完毕后仍在 `Vim` 常规模式下。
 
 ![saving changes while editing](../assets/11-3.png)
 
@@ -154,7 +154,7 @@ Here is ano
 
 此时文件有变更，只是不保存、直接退出。
 
-如果此时省略叹号，变成 `:q` + <kbd>Enter</kbd>，则 Vim 会再次确认是否真的想退出，并给出提示信息（如图所示）：
+如果此时省略叹号，变成 `:q` + <kbd>Enter</kbd>，则 `Vim` 会再次确认是否真的想退出，并给出提示信息（如图所示）：
 
 ![](../assets/11-4.png)
 
@@ -164,7 +164,7 @@ Here is ano
 
 **图 11-5 有变更但未强制退出时，Vim 会中断操作并给出英文提示信息**
 
-上面两张截图，第一张是 Windows 下安装的 v9.1 版 Vim；第二张为 Windows Subsystem for Linux（WSL）下 Ubuntu 系统自带的 v8.1 版 Vim。二者效果一致，都会中断操作。
+上面两张截图，第一张是 `Windows` 下安装的 `v9.1` 版 `Vim`；第二张为 `Windows Subsystem for Linux`（`WSL`）下 `Ubuntu` 系统自带的 `v8.1` 版 Vim。二者效果一致，都会中断操作。
 
 
 
@@ -182,7 +182,7 @@ Here is ano
 
 ## 7 小结
 
-- Vim 的三个基本形态：
+- `Vim` 的三个基本形态：
 
 |             基本形态              |                       示例                       |
 | :-------------------------------: | :----------------------------------------------: |
