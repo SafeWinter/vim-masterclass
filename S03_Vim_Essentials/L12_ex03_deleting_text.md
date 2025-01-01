@@ -123,7 +123,7 @@ mountains, far from the countries Vokalia and
 from the countries Vokalia and
 ```
 
-### 
+
 
 ### 2.4 文本行的删除练习（Practice deleting lines）
 

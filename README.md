@@ -30,31 +30,31 @@
 > By the time you finish the Vim Masterclass you'll know how to:<br/>
 > 当您完成 Vim 大师班课程，您将知道如何：
 >
-> - **Work with multiple files**, including how to move data back and forth between different files, copying & pasting from one file to another, and quickly jumping to another file.  You'll also learn how to view multiple files at the same time using Vim's windowing system.<br/>
+> - **Work with multiple files**, including how to move data back and forth between different files, copying & pasting from one file to another, and quickly jumping to another file.  You'll also learn how to view multiple files at the same time using Vim's windowing system.
 >   **处理多个文件**，包括如何在不同文件之间来回移动数据、从一个文件复制并粘贴到另一个文件以及快速跳转到另一个文件。您还将学习如何使用 Vim 的窗口系统同时查看多个文件。
-> - **Use the must-know keyboard shortcuts** and how to remember them easily.  You'll actually learn how to "think in Vim" so you don't even have to memorize each and every command, saving you countless hours of work.<br/>
+> - **Use the must-know keyboard shortcuts** and how to remember them easily.  You'll actually learn how to "think in Vim" so you don't even have to memorize each and every command, saving you countless hours of work.
 >   **使用必须知道的键盘快捷键** 以及如何轻松记住它们。您实际上将学习如何“在 Vim 中思考”，因此您甚至不必记住每一个命令，从而节省您无数的工作时间。
-> - **Find and replace entire blocks** of information within a file.  That includes how to refactor your code by renaming all variables in a file or set of files, reliably.  Of course, you'll learn simple find and replace techniques to replace a word in an entire file and much more.<br/>
->   查找并替换文件中的整个信息块。这包括如何通过可靠地重命名一个文件或一组文件中的所有变量来重构代码。当然，您将学习简单的查找和替换技术来替换整个文件中的单词等等。
-> - **Cut, copy and paste**.  You'll find out how to make the most of Vim's built-in clipboard system, use Vim's clipboard history, and how to access your system's clipboard from within Vim.<br/>
+> - **Find and replace entire blocks** of information within a file.  That includes how to refactor your code by renaming all variables in a file or set of files, reliably.  Of course, you'll learn simple find and replace techniques to replace a word in an entire file and much more.
+>   **查找并替换文件中的整个信息块**。这包括如何通过可靠地重命名一个文件或一组文件中的所有变量来重构代码。当然，您将学习简单的查找和替换技术来替换整个文件中的单词等等。
+> - **Cut, copy and paste**.  You'll find out how to make the most of Vim's built-in clipboard system, use Vim's clipboard history, and how to access your system's clipboard from within Vim.
 >   **剪切、复制和粘贴**。您将了解如何充分利用 Vim 的内置剪贴板系统、使用 Vim 的剪贴板历史记录以及如何从 Vim 中访问系统的剪贴板。
-> - **Visually select blocks of text** and perform edits on those blocks like moving the block, deleting the block, indenting/shifting the block, and more.  You'll understand Vim's text objects so you can quickly select single or multiple words, lines, paragraphs, HTML/XML tags, code blocks, and more.<br/>
+> - **Visually select blocks of text** and perform edits on those blocks like moving the block, deleting the block, indenting/shifting the block, and more.  You'll understand Vim's text objects so you can quickly select single or multiple words, lines, paragraphs, HTML/XML tags, code blocks, and more.
 >   **直观地选择文本块** 并对这些块执行编辑，例如移动块、删除块、缩进/移动块等。您将了解 Vim 的文本对象，以便快速选择单个或多个单词、行、段落、HTML/XML 标记、代码块等。
-> - **How to make vertical edits** and use Vim's Visual Block Mode.  (Some call this column editing mode or rectangle mode…)<br/>
->   **如何进行垂直编辑** 和使用 Vim 的视觉块模式。 （有人称此列编辑模式或矩形模式......）
-> - **Enable syntax highlighting** for source code, configuration files, or any type of file you edit often.  That includes how to customize the color scheme and color code text in Vim.<br/>
+> - **How to make vertical edits** and use Vim's Visual Block Mode.  (Some call this column editing mode or rectangle mode…)
+>   如何进行垂直编辑** 和使用 Vim 的视觉块模式。 （有人称此列编辑模式或矩形模式......）
+> - **Enable syntax highlighting** for source code, configuration files, or any type of file you edit often.  That includes how to customize the color scheme and color code text in Vim.
 >   为源代码、配置文件或您经常编辑的任何类型的文件 **启用语法突出显示**。其中包括如何在 Vim 中自定义配色方案和颜色代码文本。
-> - **Employ simple to advanced navigation techniques** so you can go exactly to where you need in a file very fast.<br/>
->   **采用简单到高级的导航技术**，以便您可以快速准确地到达文件中所需的位置。
-> - **Practical application tips** such as how to edit source code, scripts, HTML, and more.  You'll find lots of opportunities for practice in this course.<br/>
+> - **Employ simple to advanced navigation techniques** so you can go exactly to where you need in a file very fast.
+>   采用简单到高级的导航技术**，以便您可以快速准确地到达文件中所需的位置。
+> - **Practical application tips** such as how to edit source code, scripts, HTML, and more.  You'll find lots of opportunities for practice in this course.
 >   **实用的应用技巧**，例如如何编辑源代码、脚本、HTML 等。在本课程中您会发现很多练习的机会。
-> - **Make the most of the built-in help system** to quickly find what you need, all without leaving Vim.<br/>
+> - **Make the most of the built-in help system** to quickly find what you need, all without leaving Vim.
 >   **充分利用内置帮助系统** 快速找到您需要的内容，而无需离开 Vim。
-> - **Use MacVim and gVim** on Linux and Windows.  This includes learning the advantages and disadvantages of both the textual interface and the graphical interfaces to Vim.<br/>
+> - **Use MacVim and gVim** on Linux and Windows.  This includes learning the advantages and disadvantages of both the textual interface and the graphical interfaces to Vim.
 >   在 Linux 和 Windows 上 **使用 MacVim 和 gVim**。这包括学习 Vim 文本界面和图形界面的优点和缺点。
-> - **Create, save, and replay macros** to normalize data and quickly repeat complicated edits.  You'll learn how to append or prepend text to every line in a text file, how to format one line of text and apply that formatting to a specified area in the file and more.  In short, you'll learn how to automate everything in Vim.<br/>
+> - **Create, save, and replay macros** to normalize data and quickly repeat complicated edits.  You'll learn how to append or prepend text to every line in a text file, how to format one line of text and apply that formatting to a specified area in the file and more.  In short, you'll learn how to automate everything in Vim.
 >   **创建、保存和重播宏**以标准化数据并快速重复复杂的编辑。您将了解如何将文本追加或添加到文本文件中的每一行，如何设置一行文本的格式并将该格式应用于文件中的指定区域等等。简而言之，您将学习如何自动化 Vim 中的一切。
-> - **Create custom shortcuts and personalized key mappings**.  If you want to create a shortcut for something you do often, you'll find out how to make your life a whole lot easier.<br/>
+> - **Create custom shortcuts and personalized key mappings**.  If you want to create a shortcut for something you do often, you'll find out how to make your life a whole lot easier.
 >   **创建自定义快捷键和个性化按键映射**。如果您想为经常做的事情创建快捷方式，您会发现如何让您的生活变得更加轻松。
 > - **Indent and shift blocks of text**.  You'll also learn how to enable auto indentation so you can quickly clean up and prettify your source code.<br/>
 >   **缩进和移动文本块**。您还将了解如何启用自动缩进，以便快速清理和美化源代码。
