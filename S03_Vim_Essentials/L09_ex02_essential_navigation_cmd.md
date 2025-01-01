@@ -95,7 +95,7 @@ This training is being provided by LinuxTrainingAcademy.com.
 
 按小写的 <kbd>W</kbd> 键 4 次。光标移至该行的第一个逗号（`,`）位置；再按 <kbd>W</kbd> 5 次，则移至该行第二个逗号（`,`）位置。
 
-按小写的 <kbd>B</kbd> 键 8 次，回到本句第一个单词（`Far`）。注意，此时逗号也被视为一个单词。
+按小写的 <kbd>B</kbd> 键 8 次，回到本句第一个单词（`Far`）[^3]。注意，此时逗号也被视为一个单词。
 
 再按大写的 <kbd>W</kbd> 键 3 次，向前移至单词 “behind” 处。注意，其间光标不会在逗号处停留；再按大写的 <kbd>W</kbd> 键 4 次，则前移至单词 “far” 处。
 
@@ -139,3 +139,5 @@ This training is being provided by LinuxTrainingAcademy.com.
 [^1]: 本节练习另附精美排版 PDF 格式，阅读体验更佳，详见：`vimclass/Exercise-02-EssentialNavigationCommands.pdf`
 
 [^2]: 默认情况下，所有单个字母的按键格式均为该字母的小写形式；若为大写，会单独添加 <kbd>Shift</kbd> 键来区分。
+[^3]: 须从第一个空白处开始操作，而不是第一个单词位置，否则结果不对。
+
