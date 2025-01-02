@@ -1,7 +1,7 @@
 # L14 Getting Help
 ---
 
-本节介绍 Vim 的帮助系统的用法（演示文件：`help.txt`）。
+本节介绍 `Vim` 的帮助系统的用法（演示文件：`help.txt`）。
 
 
 
@@ -9,7 +9,7 @@
 
 命令模式下：`:help` + <kbd>Enter</kbd>
 
-Vim 帮助系统也是一个文本窗口，之前介绍的 <kbd>H</kbd><kbd>J</kbd><kbd>K</kbd><kbd>L</kbd> 等命令均有效。
+`Vim` 帮助系统也是一个文本窗口，之前介绍的 <kbd>H</kbd><kbd>J</kbd><kbd>K</kbd><kbd>L</kbd> 等命令均有效。
 
 使用 <kbd>Ctrl</kbd> + <kbd>G</kbd> 可以查看当前帮助文件所在的绝对路径：
 
@@ -61,7 +61,7 @@ Vim 帮助系统也是一个文本窗口，之前介绍的 <kbd>H</kbd><kbd>J</k
 
 ![](../assets/14-4.png)
 
-可见 `linewise` 表示以行为单位进行操作，与之对应的是 `characterwise`，即以字符为单位进行操作。
+可见 `linewise` 表示以 **行** 为单位进行操作，与之对应的是 `characterwise`，即以 **字符** 为单位进行操作。
 
 
 
@@ -71,7 +71,7 @@ Vim 帮助系统也是一个文本窗口，之前介绍的 <kbd>H</kbd><kbd>J</k
 
 ![](../assets/14-5.png)
 
-视频中光标停留的术语名词也叫“主题”（subject）。
+视频中光标停留的术语名词也叫 “主题”（subject）。
 
 
 
@@ -103,7 +103,7 @@ Vim 帮助系统也是一个文本窗口，之前介绍的 <kbd>H</kbd><kbd>J</k
 
 此时可以用 <kbd>Tab</kbd> 或 <kbd>Shift</kbd> + <kbd>Tab</kbd> 遍历弹出的候选命令。
 
-若再输入 `:qu` 并按 <kbd>Ctrl</kbd> + <kbd>D</kbd>，Vim 将 **重新列出** 以 `:qu` 开头的候选命令列表：
+若再输入 `:qu` 并按 <kbd>Ctrl</kbd> + <kbd>D</kbd>，`Vim` 将 **重新列出** 以 `:qu` 开头的候选命令列表：
 
 ![](../assets/14-8.png)
 
@@ -111,4 +111,4 @@ Vim 帮助系统也是一个文本窗口，之前介绍的 <kbd>H</kbd><kbd>J</k
 
 ![](../assets/14-9.png)
 
-但该配置关闭电脑后又会还原。关于 Vim 配置如何永久生效，后续会详述，这里略过。
+但该配置关闭电脑后又会还原。关于 `Vim` 配置如何永久生效，后续会详述，这里略过。
