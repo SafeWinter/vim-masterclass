@@ -147,7 +147,7 @@
 
 ## 本章小结
 
-- cut-copy-paste = delete-yank-put
+- `cut`-`copy`-`paste` = `delete`-`yank`-`put`
 - Registers are storage locations（因此又译【缓冲区】，用于存储和读取）
 - `""` 包含了上一次操作截取下来的内容（contains last operated on text）
 - 没有指定寄存器运行的命令，用的都是默认寄存器里的内容，例如粘贴命令 `p`
