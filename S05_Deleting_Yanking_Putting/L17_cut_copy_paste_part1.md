@@ -50,13 +50,19 @@
 
 先用 <kbd>X</kbd> 剪切，再用 <kbd>P</kbd> 粘贴该字符。
 
-<kbd>X</kbd><kbd>P</kbd>：交换当前光标与光标右边的一个字符
+<kbd>X</kbd><kbd>P</kbd>：交换当前光标与光标 **右边** 的一个字符（还原：<kbd>Shift</kbd><kbd>X</kbd><kbd>Shift</kbd><kbd>P</kbd> + <kbd>X</kbd><kbd>P</kbd>，或者 <kbd>U</kbd><kbd>U</kbd>）
+
+<kbd>Shift</kbd><kbd>X</kbd> + <kbd>P</kbd>：交换当前光标与光标 **左边** 的一个字符（还原：<kbd>Shift</kbd><kbd>X</kbd><kbd>Shift</kbd><kbd>P</kbd> + <kbd>X</kbd><kbd>P</kbd>，或者 <kbd>U</kbd><kbd>U</kbd>）
 
 
 
 ## 5 剪切光标右边的剩余文字，粘贴到该行开头
 
 <kbd>D</kbd><kbd>$</kbd> + <kbd>0</kbd> + <kbd>Shift</kbd><kbd>P</kbd>
+
+或者：
+
+<kbd>Shift</kbd><kbd>D</kbd> + <kbd>0</kbd> + <kbd>Shift</kbd><kbd>P</kbd>
 
 
 
