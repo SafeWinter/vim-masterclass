@@ -1,6 +1,8 @@
 # L22 Search, Find, and Replace - Part One
 ---
 
+本课同步练习文件：`vimclass/searching.txt`。
+
 
 
 ## 1 从光标位置起，正向定位到当前行的首个字符 b
