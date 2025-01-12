@@ -1,6 +1,8 @@
 # L23 Search, Find, and Replace - Part Two
 ---
 
+本课同步练习文件：`vimclass/searching.txt`。
+
 
 
 ## 1 文本替换命令 :s/old/new/
