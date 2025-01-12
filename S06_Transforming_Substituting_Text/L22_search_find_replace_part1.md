@@ -160,7 +160,7 @@ Delete THIS<<--- word.
 
 ## 12 查找光标所在的上一个单词
 
-使用 <kbd>$</kbd>，重复该操作，使用 <kbd>\$</kbd> 或 <kbd>N</kbd>；逆向操作仍然使用 <kbd>Shift</kbd><kbd>N</kbd>。
+使用 <kbd>#</kbd>，重复该操作，使用 <kbd>\#</kbd> 或 <kbd>N</kbd>；逆向操作仍然使用 <kbd>Shift</kbd><kbd>N</kbd>。
 
 > [!tip]
 >
