@@ -162,6 +162,12 @@ Delete THIS<<--- word.
 
 使用 <kbd>$</kbd>，重复该操作，使用 <kbd>\$</kbd> 或 <kbd>N</kbd>；逆向操作仍然使用 <kbd>Shift</kbd><kbd>N</kbd>。
 
+> [!tip]
+>
+> **发散**
+>
+> 从形状上看，<kbd>#</kbd> 更像是 <kbd>\*</kbd> 的 “放大版”，形似 <kbd>\*</kbd> 的 “大写”；而 <kbd>\*</kbd> 则形似 <kbd>#</kbd> 的 “小写”。
+
 
 
 ## 13 全局搜索 motion 与 D 命令的组合应用
