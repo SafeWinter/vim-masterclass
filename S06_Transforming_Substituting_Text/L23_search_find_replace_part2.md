@@ -9,7 +9,7 @@
 
 例如，将下列文本行中的 `net` 替换为 `org`：
 
-```bash
+```markdown
 DOMAIN=example.net                      # The example.net doma    in.
 ```
 
