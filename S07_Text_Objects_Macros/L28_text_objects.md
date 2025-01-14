@@ -151,3 +151,9 @@ This is a sentence comprised of many words.  This is another s    entence. Just 
 - 双引号：<kbd>A</kbd><kbd>"</kbd>、<kbd>I</kbd><kbd>"</kbd>
 - 单引号：<kbd>A</kbd><kbd>'</kbd>、<kbd>I</kbd><kbd>'</kbd>
 - 反引号：<kbd>A</kbd><kbd>\`</kbd>、<kbd>I</kbd><kbd>\`</kbd>
+
+
+
+## 12 本节思维导图
+
+![](../assets/28-1.png)
