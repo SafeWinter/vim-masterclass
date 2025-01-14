@@ -97,9 +97,9 @@ Status available：:heavy_check_mark: (Completed) | :hourglass_flowing_sand: (Wo
 | S02  |                 Vim Quickstart                 |    :heavy_check_mark:    |
 | S03  |                 Vim Essentials                 |    :heavy_check_mark:    |
 | S04  |              The Vim Help System               |    :heavy_check_mark:    |
-| S05  |         Deleting, Yanking, and Putting         | :hourglass_flowing_sand: |
-| S06  |       Transforming and Substituting Text       |      :orange_book:       |
-| S07  |            Text Objects and Macros             |      :orange_book:       |
+| S05  |         Deleting, Yanking, and Putting         |    :heavy_check_mark:    |
+| S06  |       Transforming and Substituting Text       |    :heavy_check_mark:    |
+| S07  |            Text Objects and Macros             | :hourglass_flowing_sand: |
 | S08  |                  Visual Mode                   |      :orange_book:       |
 | S09  | Vim Settings, Preferences, and Customizations  |      :orange_book:       |
 | S10  |            Vim Buffers and Windows             |      :orange_book:       |
