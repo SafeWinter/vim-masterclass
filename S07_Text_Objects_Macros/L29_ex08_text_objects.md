@@ -47,7 +47,7 @@ The tourist (as we will call him) was expounding.
 print("The weatherman said, 'This weekend will be warm,' but that was a lie.")
 ```
 
-这是其中一种实现方案：按 <kbd>/</kbd><kbd>(</kbd> + <kbd>Enter</kbd>。接着，试通过三个字符的组合命令删除这一整块内容（即 `"The weatherman said, 'This weekend will be warm,' but that was a lie."`）。该命令为 <kbd>D</kbd><kbd>A</kbd><kbd>(</kbd> 或者 <kbd>D</kbd><kbd>A</kbd><kbd>)</kbd>。
+这是其中一种实现方案：按 <kbd>/</kbd><kbd>(</kbd> + <kbd>Enter</kbd>。接着，试通过三个字符的组合命令删除小括号这一整块内容（即 `("The weatherman said, 'This weekend will be warm,' but that was a lie.")`）。该命令为 <kbd>D</kbd><kbd>A</kbd><kbd>(</kbd> 或者 <kbd>D</kbd><kbd>A</kbd><kbd>)</kbd>。
 
 
 
@@ -100,7 +100,7 @@ scripts=[]
 <yank_me>
 ```
 
-接着，输入 `"iyi>` 或者 `"iyi<`，将尖括号内的文本复制到 `"i` 寄存器中。然后通过命令 `:reg i` + <kbd>Enter</kbd> 查看寄存器 `"i` 中的内容是否为 `yank_me`。
+接着，将尖括号内的文本复制到 `"i` 寄存器中。具体做法：输入 `"iyi>` 或者 `"iyi<`。然后查看寄存器 `"i` 中的内容是否为 `yank_me`，方法是：输入命令 `:reg i` + <kbd>Enter</kbd> 。
 
 然后，再连同尖括号本身，将文本 `<yank_me>` 复制后存入寄存器 `"a`。具体做法：输入命令 `"aya<` 或 `"aya>`，并通过命令 `:reg a` + <kbd>Enter</kbd> 进行确认，看看寄存器中的内容是否为 `<yank_me>`。
 
