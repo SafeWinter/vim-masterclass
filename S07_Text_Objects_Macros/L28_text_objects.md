@@ -63,13 +63,14 @@
 此外，对于句子中出现换行的情况，`Vim` 也能自动视为同一句话，一并处理。例如，对于下列三句话，如果需要删除第二句，操作前如下所示（假设光标位于单词 `multiple` 上）：
 
 ```markdown
-This is a sentence comprised of many words.  This is another s    entence. A                                                      paragraph is made up of multiple sentences.  Just like this on    e!
+This is a sentence comprised of many words.  This is another sentence. A 
+paragraph is made up of multiple sentences.  Just like this one!
 ```
 
 执行操作 <kbd>D</kbd><kbd>A</kbd><kbd>S</kbd>，得到：
 
 ```markdown
-This is a sentence comprised of many words.  This is another s    entence. Just like this one!
+This is a sentence comprised of many words.  This is another sentence. Just like this one!
 ```
 
 重复上述操作，还可以使用快捷键 <kbd>.</kbd>。
