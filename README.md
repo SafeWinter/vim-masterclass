@@ -91,19 +91,19 @@
 
 Status available：:heavy_check_mark: (Completed) | :hourglass_flowing_sand: (Working) | :no_entry: (Not Started) | :orange_book: (Finish Learning)
 
-| No.  |                 Chapter Title                  |          Status          |
-| :--: | :--------------------------------------------: | :----------------------: |
-| S01  |              Course Introduction               |    :heavy_check_mark:    |
-| S02  |                 Vim Quickstart                 |    :heavy_check_mark:    |
-| S03  |                 Vim Essentials                 |    :heavy_check_mark:    |
-| S04  |              The Vim Help System               |    :heavy_check_mark:    |
-| S05  |         Deleting, Yanking, and Putting         |    :heavy_check_mark:    |
-| S06  |       Transforming and Substituting Text       |    :heavy_check_mark:    |
-| S07  |            Text Objects and Macros             | :hourglass_flowing_sand: |
-| S08  |                  Visual Mode                   |      :orange_book:       |
-| S09  | Vim Settings, Preferences, and Customizations  |      :orange_book:       |
-| S10  |            Vim Buffers and Windows             |      :orange_book:       |
-| S11  |                  Vim Plugins                   |      :orange_book:       |
-| S12  | Vim Graphical User Interfaces: Gvim and MacVim |      :orange_book:       |
-| S13  |                 Live Q&A Calls                 |      :orange_book:       |
+| No.  |          Status          |                 Chapter Title                  |
+| :--: | :----------------------: | :--------------------------------------------: |
+| S01  |    :heavy_check_mark:    |              Course Introduction               |
+| S02  |    :heavy_check_mark:    |                 Vim Quickstart                 |
+| S03  |    :heavy_check_mark:    |                 Vim Essentials                 |
+| S04  |    :heavy_check_mark:    |              The Vim Help System               |
+| S05  |    :heavy_check_mark:    |         Deleting, Yanking, and Putting         |
+| S06  |    :heavy_check_mark:    |       Transforming and Substituting Text       |
+| S07  |    :heavy_check_mark:    |            Text Objects and Macros             |
+| S08  | :hourglass_flowing_sand: |                  Visual Mode                   |
+| S09  |      :orange_book:       | Vim Settings, Preferences, and Customizations  |
+| S10  |      :orange_book:       |            Vim Buffers and Windows             |
+| S11  |      :orange_book:       |                  Vim Plugins                   |
+| S12  |      :orange_book:       | Vim Graphical User Interfaces: Gvim and MacVim |
+| S13  |      :orange_book:       |                 Live Q&A Calls                 |
 
