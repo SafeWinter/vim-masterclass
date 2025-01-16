@@ -4,7 +4,7 @@
 
 ## 1. Profiles
 
-![Redis 4.x Cookbook](assets/cover.png)
+![Vim Masterclass](assets/cover.png)
 
 |    **Title**    |    **Vim Masterclass**    |
 | :-------------: | :-----------------------: |
