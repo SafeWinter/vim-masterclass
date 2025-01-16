@@ -23,7 +23,7 @@ vim macros-practice.txt
 
 ### 2.2. 将旧版 Python 代码转换为新版写法
 
-给定一组旧版 Python 代码（`v2.6` 及以前版本），试将其改为新版写法（`v3.0` 即以上版本）：将 `print` 语句改为 `print()` 函数。也就是说，需要对以下各行作如下处理：
+给定一组旧版 Python 代码（`v2.6` 及以前版本），试将其改为新版写法（`v3.0` 即以上版本）：将 `print` 语句改为 `print()` 函数。也就是说，需要对以下各行作如下处理——
 
 由修改前的：
 
@@ -37,47 +37,36 @@ print "Macros are very fun!"
 print("Macros are very fun!")
 ```
 
-Let's do this with a macro.  By the way, it's not important to know anything about Python.  The goal here is to give you a practical example for you to practice your Vim macros skills with.
-让我们用宏来做这个。顺便说一下，了解 Python 并不重要。这里的目标是给你一个实际的例子，让你练习你的 Vim 宏技能。
+下面用 `Vim` 宏来实现。顺便提一下，本练习无需了解 `Python` 语法，本例旨在提供一个实际案例来练习 `Vim` 宏的相关操作。
 
-Here is one way to accomplish this task:
-这里有一种方法可以完成这个任务：
+其中一种参考方案实现如下：
 
-- Place your cursor on the line that reads:  print "Macros are very fun!"
-  将光标放在以下行上： print "Macros are very fun!"
-- Start recording into the **"a** register with **qa**.
-  开始录制到“a register with qa”。
-- Normalize your cursor position to the beginning of the line by typing **0**.
-  通过输入 0 将光标位置归一化到行首。
-- Position the cursor at the next space with **f<SPACE>**.
-  将光标定位到下一个空格，使用 f。
-- Replace the space with an opening parenthesis with **r(**.
-  将空格替换为左括号 r(。
-- Append a closing parenthesis to the line with **A)** and press **<ESCAPE>** to return to normal mode.
-  在带有 A) 的行末添加一个右括号，然后按 返回正常模式。
-- Now position the cursor on the next line with **j** so the macro can be easily repeated.
-  现在将光标移动到下一行，使用 j 以便宏可以轻松重复。
-- Finally type **q** to stop recording the macro.
-  最后输入 q 以停止录制宏。
+- 光标定位到这一行：`print "Macros are very fun!"`
+- 按 <kbd>Q</kbd><kbd>A</kbd> 启动宏录制并将其存入寄存器 `"a`；
+- 按 <kbd>0</kbd> 对光标作标准化处理，统一定位到行首；
+- 按 <kbd>F</kbd><kbd>Space</kbd> 将光标定位到下一处空格位置；
+- 按 <kbd>R</kbd><kbd>(</kbd> 将当前空格替换为左小括号；
+- 按 <kbd>Shift</kbd><kbd>A</kbd><kbd>)</kbd> 在行尾添加一个右小括号，再按 <kbd>Escape</kbd> 切回正常模式；
+- 按 <kbd>J</kbd> 将光标下移一行，以便 `Vim` 宏快速重复操作；
+- 最后，按 <kbd>Q</kbd> 停止宏录制。
 
-You can examine the contents of your macro by looking at the **"a** register with **:reg a<ENTER>**.  Here is what it should look like:
-您可以通过查看“a 寄存器，使用 :reg a 来检查宏的内容。它应该是这样的：
+要查看寄存器 `"a` 中的录制内容，可输入命令 `:reg a` + <kbd>Enter</kbd>。内容如下：
 
 `"a  0f r(A)^[j`
 
-Play your macro on the next line by typing **@a**.  Use **@@** to repeat the macro on.  Continue repeating the macro with **@@** on the remaining print statements.
-在下一行通过输入 @a 播放你的宏。使用 @@ 重复宏。继续在剩余的打印语句中使用 @@ 重复宏。
+键入 <kbd>@</kbd><kbd>A</kbd> 即可对下一行运行录好的宏；若要重复执行上一次宏操作，按 <kbd>@</kbd><kbd>@</kbd> 即可。余下各行均可使用 <kbd>@</kbd><kbd>@</kbd> 重复宏的运行。
 
-NOTE: The solution provided above is not the only way to accomplish this task!  One simple example is replacing **f<SPACE>** with **t"** in the macro.  Both perform the same act of positioning the cursor under the space.  As long as you get the desired results you're after, that's all that matters.
-注意：上述提供的解决方案并不是完成此任务的唯一方法！一个简单的例子是在宏中将 f 替换为 t"。两者都执行将光标定位在空格下的相同操作。只要你得到你想要的结果，这就是最重要的。
+> [!note]
+>
+> **注意**
+>
+> 上述实现仅供参考，并非唯一的解决方案。例如将 <kbd>F</kbd><kbd>Space</kbd> 改为 <kbd>T</kbd><kbd>"</kbd>，也能将光标定位到同一处空格。只要能实现最终的效果就行。
 
-### 2.3. 从列表中批量创建 Shell 脚本
 
-Let's say you have a list of users and you want to perform the same set of actions on each of those users.  One way to accomplish this is to record a macro that performs the required command for one user and apply that macro to the rest of the list.
-假设你有一个用户列表，并且你想对每个用户执行相同的一组操作。实现这一点的一种方法是录制一个宏，该宏为一个用户执行所需的命令，然后将该宏应用于列表中的其余用户。
 
-The goal is to turn this text:
-目标是将这段文本转换为：
+### 2.3. 根据列表内容批量创建 Shell 脚本
+
+给定一个用户列表，要求对列表中的每个用户分别执行一组相同的操作。为此，可以将某个用户的一系列操作录制为一个 `Vim` 宏，然后对其余用户执行这个宏即可。最终目标是将如下这段文本：
 
 ```markdown
 jason
@@ -87,7 +76,7 @@ emma
 ava
 ```
 
-改为：
+统一改为以下形式：
 
 ```bash
 passwd -l jason && echo jason >> locked_users.txt
@@ -97,223 +86,159 @@ passwd -l emma && echo emma >> locked_users.txt
 passwd -l ava && echo ava >> locked_users.txt
 ```
 
-You could use those commands on a Linux system to lock each of the user accounts and add the account names to the locked_users.txt file.  Of course, it's not important what these commands do as we're interested in Vim, but I wanted to provide you with a practical example.
-您可以在 Linux 系统上使用这些命令来锁定每个用户帐户，并将帐户名称添加到 locked_users.txt 文件中。 当然，这些命令的作用并不重要，因为我们对 Vim 感兴趣，但我想给您提供一个实际的例子。
+这组命令用户锁定 `Linux` 系统中的指定用户帐号，并将其帐号名追加到一个 `locked_users.txt` 文件中。命令的含义无关紧要，关键在于 `Vim` 的用法。本练习旨在提供一个实际的应用场景。
 
-Here is one way to accomplish this task:
-这里有一种方法可以完成这个任务：
+其中一种参考方案实现如下：
 
-- Place your cursor on the line that contains "jason".
-  将光标放在包含“jason”的行上。
-- Start recording into the **"b** register with **qb**.
-  开始录制到 "b register with qb。
-- Yank the user name into the default register with **yaw**.
-  将用户名用 yaw 拉入默认寄存器。
-- Start insert mode at the beginning of the line with **I**. Now type the text "passwd -l " and press **<ESCAPE>**.
-  在行首以 I 开始插入模式。现在输入文本 "passwd -l " 并按 。
-- Next, start insert mode at the end of the line with **A** and type " && echo ".  Press **<ESCAPE>** to return to normal mode.
-  接下来，在行末按 A 进入插入模式，并输入 " && echo "。按 返回到正常模式。
-- Next, paste the contents of the unnamed register after the cursor position with **p**.
-  接下来，在光标位置后使用 p 粘贴未命名寄存器的内容。
-- Continue appending by typing **a**, and then typing " >> locked_users.txt" followed by **<ESCAPE>**.
-  继续通过输入 a，然后输入 " >> locked_users.txt" 并按 继续追加。
-- Now position the cursor on the next line with **j** so the macro can be easily repeated.
-  现在将光标移动到下一行，使用 j 以便宏可以轻松重复。
-- Finally type **q** to stop recording the macro.
-  最后输入 q 以停止录制宏。
+- 将光标定位到 `jason` 这一行；
+- 按 <kbd>Q</kbd><kbd>B</kbd> 启动宏录制，并将其存入寄存器 `"b`；
+- 按 <kbd>Y</kbd><kbd>A</kbd><kbd>W</kbd> 将用户名复制（yank）到默认寄存器；
+- 按 <kbd>Shift</kbd><kbd>I</kbd> 从行首进入插入模式，并输入 `passwd -l` + <kbd>Escape</kbd>；
+- 按 <kbd>Shift</kbd><kbd>A</kbd> 从行尾进入插入模式，并输入 <kbd>Space</kbd> + `&&` + <kbd>Space</kbd> + `echo` + <kbd>Space</kbd> + <kbd>Escape</kbd> 返回正常模式；
+- 接着，按 <kbd>P</kbd> 粘贴未命名寄存器（unnamed register）中的内容；
+- 按 <kbd>A</kbd>，并输入 <kbd>Space</kbd> + `>>` + <kbd>Space</kbd> + `locked_users.txt`，再按 <kbd>Escape</kbd> 切回正常模式；
+- 按 <kbd>J</kbd> 将光标下移一行，以便快速重复宏操作；
+- 最后，按 <kbd>Q</kbd> 停止宏录制。
 
-You can examine the contents of your macro by looking at the **"b** register with **:reg b<ENTER>**.  Here is what it should look like:
-您可以通过查看“b 寄存器”来检查宏的内容，方法是输入 :reg b。它应该是这样的：
+要查看寄存器 `"b` 中的录制内容，可输入命令 `:reg b` + <kbd>Enter</kbd>。内容如下：
 
 `"b  yawIpasswd -l ^[A && echo ^[pa >> locked_users.txt^[j`
 
-Play your macro on the next line by typing **@b**.  You can probably see that there are three more items in this list, so use **3@b** to repeat the macro four times.
-在下一行通过输入 @b 来播放你的宏。你可能会看到这个列表中还有三个项目，所以使用 3@b 来重复宏四次。
+对下一行执行宏操作，输入 <kbd>@</kbd><kbd>B</kbd> 即可；后面三个类似的文本行，则可以用 <kbd>3</kbd><kbd>@</kbd><kbd>B</kbd> 轻松实现批量修改。
 
 
 
 ### 2.4. 对电话号码作格式化处理
 
-接下来，创建一个宏，将如下所示的电话号码：
+接下来，创建一个 `Vim` 宏并存入寄存器 `"p`，实现将如下所示的电话号码：
 
 `2798265253`
 
-转换为以下符合美国人书写惯例的统一格式：
+统一转换为符合美国人书写习惯的格式：
 
 `(279) 826-5253`
 
-Here is one way to accomplish this task:
-这里有一种方法可以完成这个任务：
+其中一种参考方案实现如下：
 
-- Place your cursor on the line that contains "2798265253".
-  将光标放在包含“2798265253”的行上。
-- Start recording into the **"p** register with **qp**.
-  开始录制到“p 寄存器”中，使用 qp。
-- Start insert mode at the beginning of the line with **I**.
-  在行首按 I 进入插入模式。
-- Type an opening parenthesis **(** and press **<ESCAPE>** to return to normal mode.
-  输入一个左括号 ( 并按 返回正常模式。
-- Position the cursor under the 9 by typing **l** 3 times.
-  将光标放在 9 下方，输入 l 三次。
-- Type **a** to append text after the cursor and type **)<SPACE>**.  Press **<ESCAPE>** to return to normal mode.
-  输入 a 以在光标后追加文本，然后输入 )。按 返回正常模式。
-- Position the cursor under the 6 by typing **l** 3 times.
-  将光标放在 6 下方，输入 l 三次。
-- Type **a-** to append a hyphen and press **<ESCAPE>** to return to normal mode.
-  输入 a- 以添加一个连字符，然后按 返回正常模式。
-- Now position the cursor on the next line with **j** so the macro can be easily repeated.
-  现在将光标移动到下一行，使用 j 以便宏可以轻松重复。
-- Finally type **q** to stop recording the macro.
-  最后输入 q 以停止录制宏。
+- 将光标定位到 `2798265253` 这一行（即待批量处理的第一行）；
+- 按 <kbd>Q</kbd><kbd>P</kbd> 启动宏录制，并将其存入寄存器 `"p`；
+- 按 <kbd>Shift</kbd><kbd>I</kbd> 从行首进入插入模式；
+- 输入左小括号 `(`，并按 <kbd>Escape</kbd> 回到正常模式；
+- 键入三次 <kbd>L</kbd>，让光标定位到 `9` 处；
+- 按 <kbd>A</kbd> 在光标后添加文字，输入 <kbd>)</kbd><kbd>Space</kbd> 后，按 <kbd>Escape</kbd> 返回正常模式。
+- 按三次 <kbd>L</kbd> 将光标移至 `6` 的下方；
+- 按 <kbd>A</kbd><kbd>-</kbd> 插入一个连字符，再按 <kbd>Escape</kbd> 回到正常模式；
+- 按 <kbd>J</kbd> 将光标下移一行，以便快速重复宏操作；
+- 最后，按 <kbd>Q</kbd> 停止宏录制。
 
-You can examine the contents of your macro by looking at the **"p** register with **:reg p<ENTER>**.  Here is what it should look like:
-您可以通过输入 :reg p 来查看宏的内容。它应该是这样的：
+要查看寄存器 `"p` 中的录制内容，可输入命令 `:reg p` + <kbd>Enter</kbd>。内容如下：
 
 `"p  I(^[llla) ^[llla-^[j`
 
-Because there is a long list of phone numbers that scroll off the bottom of your screen you can't easily know how many times you need to apply the macro.  Also, repeating @@ could take quite awhile.  So, get the range you need to apply the macro to.  Turn on line numbering with **:set nu<ENTER>**.  Note that your cursor is currently on line 25.  Now page down to the end of the list of phone numbers with **Ctrl-f**.  You'll find the last phone number is on line 73.
-因为有一长串电话号码滚动出屏幕底部，所以你无法轻易知道需要应用宏多少次。此外，重复@@可能会花费相当长的时间。因此，获取你需要应用宏的范围。通过:set nu开启行号。请注意，你的光标当前在第 25 行。现在按 Ctrl-f 向下翻页到电话号码列表的末尾。你会发现最后一个电话号码在第 73 行。
+鉴于要处理的电话号码很多，文本行超出了屏幕，难以轻易获知需要重置执行多少次宏；此外，单纯使用 `@@` 来重复执行也很费时间。此时应该使用指定具体范围来应用宏操作。先用 `:set nu` 开启行号，再将光标定位到第 25 行；然后按 <kbd>Ctrl</kbd> + <kbd>F</kbd> 向下翻页，确定最后一个电话号码的行号为 73。
 
-Execute the macro over this range using the **normal** command.  Type **:25,73 normal @p<ENTER>**. Now check that the macro was executed over that entire range by paging up with **Ctrl-b**.
-使用正常命令在此范围内执行宏。输入 :25,73 normal @p。现在通过按 Ctrl-b 向上翻页检查宏是否在整个范围内执行。
+接着输入 `:25,73 normal @p` + <kbd>Enter</kbd>，通过 `normal` 命令指定具体范围并批量运行宏操作。之后再通过 <kbd>Ctrl</kbd> + <kbd>B</kbd> 上翻查看宏的执行情况。
+
+
 
 ### 2.5. 从日志文件中提取重要数据
 
-The next set of lines in the file contain system logs from a Linux server.  Specifically these lines are logs of blocked connection attempts by the local Linux firewall.  Your goal is to extract the timestamp, the source IP address of the connection attempt, and the destination port.
-文件中的下一组行包含来自 Linux 服务器的系统日志。具体来说，这些行是本地 Linux 防火墙阻止的连接尝试的日志。您的目标是提取时间戳、连接尝试的源 IP 地址和目标端口。
+下一组练习取材自 `Linux` 服务器的系统日志。这些内容是本地 `Linux` 防火墙阻止连接请求的日志记录。我们的目标是分别提取出时间戳、尝试连接的源 IP 地址以及目标端口。
 
-The source IP address follows "SRC=".  Example: SRC=190.18.193.152
-源 IP 地址在“SRC=”后面。 示例：SRC=190.18.193.152
+其中，`SRC=` 字样后的内容即为源 IP 地址，例如：`SRC=190.18.193.152`。
 
-The destination port follows "DPT=".  Example: DPT=23
-目标端口跟随 "DPT="。 示例：DPT=23
+目标端口则位于 `DPT=` 字样后，例如：`DPT=23`。
 
-This line: 这一行：
+也就是利用 `Vim` 宏（假设录制到寄存器 `"l`）将下面这样的日志内容：
 
 ```markdown
 Jan 13 09:57:01 www1 kernel: [3947771.808744] [BLOCK] IN=eth0 OUT= MAC=e6:e9:2d:04:b6:95:3c:8a:b0:0d:6f:f0:08:00 SRC=190.18.193.152 DST=2.5.9.1 LEN=40 TOS=0x02 PREC=0x00 TTL=51 ID=25120 PROTO=TCP SPT=12502 DPT=23 WINDOW=4078 RES=0x00 SYN URGP=0
 ```
 
-Will be narrowed down to just this comma separated value line:
-将仅缩小到这一逗号分隔值行：
+批量精简为如下版本，并以逗号分隔：
 
 ```markdown
 Jan 13 09:57:01,190.188.193.152,23
 ```
 
-Here is one way to accomplish this task:
-这里有一种方法可以完成这个任务：
+其中一种参考方案实现如下：
 
-- Place your cursor on the line that starts with "Jan 13 09:57:01".
-  将光标放在以“Jan 13 09:57:01”开头的行上。
-- Start recording into the **"l** register with **ql**.
-  开始录制到 "l register with ql。
-- Normalize your cursor position to the beginning of the line by typing **0**.
-  通过输入 0 将光标位置归一化到行首。
-- Position your cursor on the space just after the time stamp by typing **tw**.
-  将光标放在时间戳后面的空格上，输入 tw。
-- Now delete all the text up to "SRC=".  You can do this with **dtS**.
-  现在删除所有文本直到 "SRC="。你可以用 dtS 来做到这一点。
-- Now delete SRC with **dw**.
-  现在用 dw 删除 SRC。
-- Next, replace "=" with a comma: **r,**.
-  接下来，将 "=" 替换为逗号：r,。
-- Position the cursor after the IP address with **f<SPACE>**.
-  将光标放在 IP 地址后面，使用 f。
-- Delete the text up to "DPT=" with **d/DPT<ENTER>**.
-  使用 d/DPT 删除 "DPT=" 之前的文本。
-- Now delete DPT with **dw**.
-  现在删除 DPT 和 dw。
-- Next, replace "=" with a comma: **r,**.
-  接下来，将 "=" 替换为逗号：r,。
-- Position the cursor after the port number with **f<SPACE>**.
-  将光标放在端口号后面，按 f。
-- Delete the remaining text on the line with **D**.
-  删除 D 所在行的其余文本。
-- Now position the cursor on the next line with **j** so the macro can be easily repeated.
-  现在将光标移动到下一行，使用 j 以便宏可以轻松重复。
-- Finally type **q** to stop recording the macro.
-  最后输入 q 以停止录制宏。
+- 将光标定位到以 `Jan 13 09:57:01` 开头的这一行；
+- 按 <kbd>Q</kbd><kbd>L</kbd> 启动宏录制，并将其存入寄存器 `"l`；
+- 按 <kbd>0</kbd> 对光标作标准化处理，统一定位到行首；
+- 按 <kbd>T</kbd><kbd>W</kbd> 将光标定位到时间戳后面的空格为止；
+- 输入 `dtS` 删除当前光标到 `SRC=` 之间的所有内容；
+- 按 <kbd>D</kbd><kbd>W</kbd> 删除 `SRC`；
+- 按 <kbd>R</kbd><kbd>,</kbd> 将 `=` 替换为逗号 `,`；
+- 按 <kbd>F</kbd><kbd>Space</kbd> 将光标定位到 IP 地址后的空格处；
+- 输入 `d/DPT` + <kbd>Enter</kbd> 删除当前光标与 `DPT=` 之间的文字内容；
+- 按 <kbd>D</kbd><kbd>W</kbd> 删除 `DPT`；
+- 按 <kbd>R</kbd><kbd>,</kbd> 再将 `=` 替换为逗号 `,`；
+- 按 <kbd>F</kbd><kbd>Space</kbd> 将光标定位到端口号后面的空格处；
+- 按 <kbd>Shift</kbd><kbd>D</kbd> 删除这一行当前光标及其后面的剩余内容；
+- 按 <kbd>J</kbd> 将光标下移一行，以便快速重复宏操作；
+- 最后，按 <kbd>Q</kbd> 停止宏录制。
 
-You can examine the contents of your macro by looking at the **"l** register with **:reg l<ENTER>**.  Here is what it should look like:
-您可以通过输入 :reg l 来查看宏的内容。它应该是这样的：
+要查看寄存器 `"l` 中的录制内容，可输入命令 `:reg l` + <kbd>Enter</kbd>。内容如下：
 
 `"l   0twdtSdwr,f d/DPT^Mdwr,f Dj`
 
-As always, there are other ways to accomplish the same task.  Just one simple example is using **2cw,<ESCAPE>** to change "SRC=" to "," instead of using **dwr,**.  Take a moment and think of other ways to alter this macro and get the same result.
-和往常一样，还有其他方法可以完成相同的任务。一个简单的例子是使用 2cw, 将 "SRC=" 改为 ","，而不是使用 dwr,。花点时间想想其他方法来修改这个宏并获得相同的结果。
+同样，还有其他方式可以实现上述任务。例如，要将 `SRC=` 改为 `,`，除了用上面的 <kbd>D</kbd><kbd>W</kbd><kbd>R</kbd> 实现，还可以使用 <kbd>2</kbd><kbd>C</kbd><kbd>W</kbd>。不妨停下来思考一下类似的备选方案对录制的宏进行修改，看看能否达到同样的效果。
 
-Test your macro on the next line by typing **@l**.  If it looks correct, continue with **@@** until all the lines are in the desired format.
-在下一行测试你的宏，输入 @l。如果看起来正确，请继续输入 @@，直到所有行都达到所需格式。
+若要对下一行日志执行录制的宏，输入 <kbd>@</kbd><kbd>L</kbd> 即可。如果没问题，就用 <kbd>@</kbd><kbd>@</kbd> 重复执行，直至处理完剩下的日志内容。
+
+
 
 ### 2.6. 将多行数据压缩为一行
 
-Remember that macros are just a series of recorded keystrokes.  Even though you've been working on macros that manipulate single lines, you can as easily manipulate multiple lines.  Let's say you want to turn these three lines into one line.
-请记住，宏只是一系列录制的按键。尽管您一直在处理操作单行的宏，但您同样可以操作多行。假设您想将这三行变成一行。
-
-Before: 之前：
+再次强调，宏录制的是一系列按键操作。尽管我们一直在单行内容上练习宏的相关操作，宏也可以作用于多行。假如需要将下列三行通过录制的宏（假设存入寄存器 `"c`）按要求处理为一行，即从之前的：
 
 ```markdown
 Country China
 1,380,950,000 people
+
 ```
 
-After: 之后：
+处理为：
 
 ```markdown
 1,380,950,000;China
 ```
 
-Here is one way to accomplish this task:
-这里有一种方法可以完成这个任务：
+其中一种参考方案实现如下：
 
-- Place your cursor on the line that reads "Country China".
-  将光标放在写有“Country China”的行上。
-- Start recording into the **"c** register with **qc**.
-  开始录制到“c 寄存器”中，使用 qc。
-- Normalize your cursor position to the beginning of the line by typing **0**.
-  通过输入 0 将光标位置归一化到行首。
-- Delete the word "Country" with **dw**.
-  用 dw 删除“Country”这个词。
-- Move to the line below with **j**.
-  用 j 移动到下一行。
-- Cut the number into the unnamed register with **dW**.
-  将数字放入未命名的寄存器中，使用 dW。
-- Move up to the original line with **k**.
-  使用 k 移动到原始行。
-- Paste the number before your cursor position with **P**.
-  在光标位置之前粘贴数字，使用 P。
-- Replace the space with a semicolon by typing **r;**.
-  将空格替换为分号，输入 r;。
-- Move to the line below with **j**.
-  用 j 移动到下一行。
-- Delete the current line and the next line with **2dd**.
-  使用 2dd 删除当前行和下一行。
-- Finally type **q** to stop recording the macro.
-  最后输入 q 以停止录制宏。
+- 将光标定位到以 `Country China` 开头的这一行；
+- 按 <kbd>Q</kbd><kbd>C</kbd> 启动宏录制，并将其存入寄存器 `"c`；
+- 按 <kbd>0</kbd> 对光标作标准化处理，统一定位到行首；
+- 按 <kbd>D</kbd><kbd>W</kbd> 删除单词 `Country`；
+- 按 <kbd>J</kbd> 将光标下移一行；
+- 按 <kbd>D</kbd><kbd>Shift</kbd><kbd>W</kbd> 将数字存入未命名寄存器（unnamed register）；
+- 按 <kbd>K</kbd> 上移光标到刚才那行；
+- 按 <kbd>Shift</kbd><kbd>P</kbd> 将数字粘贴到光标位置的前方；
+- 按 <kbd>R</kbd><kbd>;</kbd> 将空格替换为分号；
+- 按 <kbd>J</kbd> 将光标下移一行；
+- 按 <kbd>2</kbd><kbd>D</kbd><kbd>D</kbd> 删除当前行与下一行内容；
+- 最后，按 <kbd>Q</kbd> 停止宏录制。
 
-You can examine the contents of your macro by looking at the **"c** register with **:reg c<ENTER>**.  Here is what it should look like:
-您可以通过输入 :reg c 来查看宏的内容。它应该是这样的：
+要查看寄存器 `"c` 中的录制内容，可输入命令 `:reg c` + <kbd>Enter</kbd>。内容如下：
 
 `"c  0dwjdWkPr;j2dd`
 
-Now use a count to repeat the macro 4 more times to format the rest of the data in this set.  Type **4@c**.
-现在使用计数将宏重复 4 次，以格式化此数据集中的其余数据。输入 4@c。
+接着，可以通过引入数量词，即 <kbd>4</kbd><kbd>@</kbd><kbd>C</kbd>，将上述宏操作再重复执行四次，实现该组数据的批量处理。
 
-As always, there are multiple ways to achieve the same result in Vim.
-和往常一样，在 Vim 中有多种方法可以实现相同的结果。
+同样，要在 `Vim` 中实现上述效果还有很多其他方案可供选择。
+
+
 
 ### 2.7. 从 HTML 中提取数据
 
-Here are a list of links (\<a> tags) on a single line of HTML.
-这里是一行 HTML 中的链接列表（\<a>标签）。
+下列这行文本为一组 `HTML` 链接列表（即 `<a>` 标签）：
 
 ```html
 <a href="#">@armyspy.com</a><a href="#">@cuvox.de</a><a href="#">@dayrep.com</a><a href="#">@einrot.com</a><a href="#">@fleckens.hu</a><a href="#">@gustr.com</a><a href="#">@jourrapide.com</a><a href="#">@rhyta.com</a><a href="#">@superrito.com</a><a href="#">@teleworm.us</a>
 ```
 
-The goal is convert those links to the following:
-目标是将这些链接转换为以下内容：
+最终需要通过 `Vim` 宏（假设存入寄存器 `"q`）处理成下列效果：
 
 ```markdown
 armyspy.com
@@ -328,29 +253,20 @@ superrito.com
 teleworm.us
 ```
 
-Here is one way to accomplish this task:
-这里有一种方法可以完成这个任务：
+其中一种参考方案实现如下：
 
-- Place your cursor at the beginning of the line that starts with "<a".
-  将光标放在以"
-- Start recording into the **"q** register with **qq**.
-  开始录制到“q”寄存器，使用 qq。
-- Delete the text up to and including "@" with **df@**.
-  删除文本直到并包括"@"，使用 df@。
-- Position the cursor under the "<" with **f<**.
-  将光标放在"<"下方，使用 f<。
-- Replace "</a>" with **<ENTER>** by typing **cf><ENTER><ESCAPE>**.
-  将 "" 替换为 ，方法是输入 cf>。
-- Finally type **q** to stop recording the macro.
-  最后输入 q 以停止录制宏。
+- 将光标定位到以 `<a` 开头的文本行；
+- 按 <kbd>Q</kbd><kbd>Q</kbd> 启动宏录制，并将其存入寄存器 `"q`；
+- 按 <kbd>D</kbd><kbd>F</kbd><kbd>@</kbd> 删除当前光标到 `@` 之间（包含 `@`）的所有内容；
+- 按 <kbd>F</kbd><kbd><</kbd> 将光标定位到下一处 `<` 位置；
+- 按 <kbd>C</kbd><kbd>F</kbd><kbd>></kbd> + <kbd>Enter</kbd> + <kbd>Escape</kbd>，将 `</a>` 替换为一个换行标记；
+- 最后，按 <kbd>Q</kbd> 停止宏录制。
 
-You can examine the contents of your macro by looking at the **"q** register with **:reg q<ENTER>**.  Here is what it should look like:
-您可以通过输入 :reg q 来查看宏的内容。它应该是这样的：
+要查看寄存器 `"q` 中的录制内容，可输入命令 `:reg q` + <kbd>Enter</kbd>。内容如下：
 
 `"q  df@f<cf>^M^[`
 
-Execute the macro with **@q**.  Keep repeating the macro with **@@** until you are left with the desired text.
-使用 @q 执行宏。继续使用 @@ 重复宏，直到得到所需的文本。
+输入 <kbd>@</kbd><kbd>Q</kbd> 即可运行这个宏。继续重复执行，按 <kbd>@</kbd><kbd>@</kbd> 即可，直至处理完其余链接内容。
 
 
 
