@@ -121,10 +121,10 @@
 
 实测发现，`WSL` 环境下，`Ubuntu` 系统安装的 `v8.0` 版 `Vim` 的 <kbd>Ctrl</kbd> + <kbd>V</kbd> 与宿主机 `Windows` 中的粘贴快捷键冲突，进入区块模式只能使用 <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>V</kbd> 来启用；。
 
-与前两个可视化模式不同，在区块模式下，对于选中的矩形区域，光标在四个角落的定位可以用 <kbd>O</kbd> 键或者组合键 <kbd>Ctrl</kbd> + <kbd>O</kbd> 进行切换。其中——
+与前两个可视化模式不同，在区块模式下，对于选中的矩形区域，光标在四个角落的定位可以用 <kbd>O</kbd> 键或者组合键 <kbd>Shift</kbd> + <kbd>O</kbd> 进行切换。其中——
 
 - <kbd>O</kbd> 键负责对角线上的两个光标位置间的切换；
-- <kbd>Ctrl</kbd> + <kbd>O</kbd> 则负责同一行上首尾光标位置的切换。
+- <kbd>Shift</kbd> + <kbd>O</kbd> 则负责同一行上首尾光标位置的切换。
 
 
 
