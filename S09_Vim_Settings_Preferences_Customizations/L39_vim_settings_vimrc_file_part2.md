@@ -54,7 +54,7 @@ map <F2> iJohn Smith<CR>123 Main Street<CR>Anytown, NY<CR><ESC>
 | `<Space>`  |   <kbd>Space</kbd>   |   `<PageDown>`   |          <kbd>Page-Down</kbd>          |
 |   `<Up>`   |     <kbd>↑</kbd>     |     `<Tab>`      |             <kbd>Tab</kbd>             |
 |  `<Down>`  |     <kbd>↓</kbd>     |     `<bar>`      |             <kbd>\|</kbd>              |
-|  `<Left>`  |     <kbd>←</kbd>     |     `<C-X>`      |      <kbd>Ctrl</kbd><kbd>X</kbd>       |
+|  `<Left>`  |     <kbd>←</kbd>     |     `<C-X>`      |     <kbd>Ctrl</kbd> + <kbd>X</kbd>     |
 | `<Right>`  |     <kbd>→</kbd>     | `<F1>` - `<F12>` | 功能键 <kbd>F1</kbd> 至 <kbd>F12</kbd> |
 
 
@@ -130,8 +130,10 @@ map <leader>w :w!<CR>
 
 其中 ——
 
-- `vmap` 表示仅在可视化模式下生效
+- `vmap` 表示仅在可视化模式、选择模式下生效
+- `xmap` 表示仅在可视化模式下生效
 - `nmap` 表示仅在正常模式下生效
+- `omap` 表示仅在操作模式下生效
 - `vnoremap`：仅在可视化模式下禁止递归生效快捷键设置
 - `nnoremap`：仅在正常模式下禁止递归生效快捷键设置
 - `" vim: set ft=vim :`：位于该文件最后一行（如图 39-7 所示），也叫 `modeline`，它用于指示 `Vim` 在处理该文件时要遵循的特定设置。`set ft=vim` 用于指定文件类型（`ft` 即 `filetype`，表示文件类型）为 `vim`。这样 `Vim` 就会启用适合 `Vim` 脚本的语法高亮和功能来显示该文件。末尾的冒号为固定写法，表示命令的结束。更多用法参考帮助文档：`:h modeline` + <kbd>Enter</kbd>。
