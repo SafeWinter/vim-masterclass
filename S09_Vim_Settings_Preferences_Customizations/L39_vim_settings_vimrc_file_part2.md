@@ -44,18 +44,18 @@ map <F2> iJohn Smith<CR>123 Main Street<CR>Anytown, NY<CR><ESC>
 
 `map` 命令中常见按键的写法：
 
-|    写法    |     按键      |       写法       |     按键     |
-| :--------: | :-----------: | :--------------: | :----------: |
-|   `<BS>`   |  `Backspace`  |    `<Insert>`    |   `Insert`   |
-|   `<CR>`   |    `Enter`    |     `<Del>`      |   `Delete`   |
-| `<Enter>`  |    `Enter`    |     `<Home>`     |    `Home`    |
-| `<Return>` |    `Enter`    |     `<End>`      |    `End`     |
-|  `<Esc>`   |   `Escape`    |    `<PageUp>`    |  `Page-Up`   |
-| `<Space>`  |    `Space`    |   `<PageDown>`   | `Page-Down`  |
-|   `<Up>`   |  `Up arrow`   |     `<Tab>`      |    `Tab`     |
-|  `<Down>`  | `Down arrow`  |     `<bar>`      |     `|`      |
-|  `<Left>`  | `Left arrow`  |     `<C-X>`      |   `Ctrl-X`   |
-| `<Right>`  | `Right arrow` | `<F1>` - `<F12>` | 相应的功能键 |
+|    写法    |         按键         |       写法       |                  按键                  |
+| :--------: | :------------------: | :--------------: | :------------------------------------: |
+|   `<BS>`   | <kbd>Backspace</kbd> |    `<Insert>`    |           <kbd>Insert</kbd>            |
+|   `<CR>`   |   <kbd>Enter</kbd>   |     `<Del>`      |           <kbd>Delete</kbd>            |
+| `<Enter>`  |   <kbd>Enter</kbd>   |     `<Home>`     |            <kbd>Home</kbd>             |
+| `<Return>` |   <kbd>Enter</kbd>   |     `<End>`      |             <kbd>End</kbd>             |
+|  `<Esc>`   |  <kbd>Escape</kbd>   |    `<PageUp>`    |           <kbd>Page-Up</kbd>           |
+| `<Space>`  |   <kbd>Space</kbd>   |   `<PageDown>`   |          <kbd>Page-Down</kbd>          |
+|   `<Up>`   |     <kbd>↑</kbd>     |     `<Tab>`      |             <kbd>Tab</kbd>             |
+|  `<Down>`  |     <kbd>↓</kbd>     |     `<bar>`      |             <kbd>\|</kbd>              |
+|  `<Left>`  |     <kbd>←</kbd>     |     `<C-X>`      |      <kbd>Ctrl</kbd><kbd>X</kbd>       |
+| `<Right>`  |     <kbd>→</kbd>     | `<F1>` - `<F12>` | 功能键 <kbd>F1</kbd> 至 <kbd>F12</kbd> |
 
 
 
