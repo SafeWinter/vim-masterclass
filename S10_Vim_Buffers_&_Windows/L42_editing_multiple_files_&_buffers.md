@@ -166,7 +166,7 @@
 
 若要移除某缓冲区，可以切换到该文件，然后运行 `:bd` + <kbd>Enter</kbd>；也可以用 `:bd <buffer_id>`、`:bd <file_name>`。例如删除 `buf-cat.txt`，需运行 `:bd 3` + <kbd>Enter</kbd>。
 
-此外，`:bd` 命令还可以指定具体范围，写作：`:[range]bd` + <kbd>Enter</kbd>。例如删除前三个缓冲区，需执行命令：`:1,3bd` + <kbd>Enter</kbd>：
+此外，`:bd` 命令还可以指定具体范围，格式为：`:[range]bd` + <kbd>Enter</kbd>。例如删除前三个缓冲区，需执行命令：`:1,3bd` + <kbd>Enter</kbd>：
 
 ![](../assets/42-11.png)
 
