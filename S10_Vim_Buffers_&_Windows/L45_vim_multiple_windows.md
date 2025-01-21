@@ -98,7 +98,7 @@
 - <kbd>Ctrl</kbd><kbd>W</kbd> + <kbd>H</kbd>：光标左移；
 - <kbd>Ctrl</kbd><kbd>W</kbd> + <kbd>J</kbd>：光标下移；
 - <kbd>Ctrl</kbd><kbd>W</kbd> + <kbd>K</kbd>：光标上移；
-- <kbd>Ctrl</kbd><kbd>W</kbd> + <kbd>I</kbd>：光标右移；
+- <kbd>Ctrl</kbd><kbd>W</kbd> + <kbd>L</kbd>：光标右移；
 
 注意到涉及窗口操作的组合键都有相同的前缀 <kbd>Ctrl</kbd><kbd>W</kbd>。为方便后续操作，也可以使用 `map` 命令重新指定快捷键并写入 `vimrc` 配置文件：
 
