@@ -101,9 +101,9 @@ Status available：:heavy_check_mark: (Completed) | :hourglass_flowing_sand: (Wo
 | S06  |    :heavy_check_mark:    |       Transforming and Substituting Text       |
 | S07  |    :heavy_check_mark:    |            Text Objects and Macros             |
 | S08  |    :heavy_check_mark:    |                  Visual Mode                   |
-| S09  | :hourglass_flowing_sand: | Vim Settings, Preferences, and Customizations  |
-| S10  |      :orange_book:       |            Vim Buffers and Windows             |
-| S11  |      :orange_book:       |                  Vim Plugins                   |
+| S09  |    :heavy_check_mark:    | Vim Settings, Preferences, and Customizations  |
+| S10  |    :heavy_check_mark:    |            Vim Buffers and Windows             |
+| S11  | :hourglass_flowing_sand: |                  Vim Plugins                   |
 | S12  |      :orange_book:       | Vim Graphical User Interfaces: Gvim and MacVim |
 | S13  |      :orange_book:       |                 Live Q&A Calls                 |
 
