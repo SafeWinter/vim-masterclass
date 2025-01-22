@@ -80,17 +80,11 @@
 
 ```powershell
 # 1. 创建相关文件夹
-> pwd
-
-Path
-----
+> (pwd).Path
 C:\Users\ad\vimfiles
 > mkdir -p pack/plugins/start | Out-Null
 > cd pack/plugins/start
-> pwd
-
-Path
-----
+> (pwd).Path
 C:\Users\ad\vimfiles\pack\plugins\start
 
 # 2. 复制 NERDTree 仓库
@@ -127,10 +121,7 @@ Resolving deltas: 100% (2847/2847), done.
 
 ```powershell
 # 1. 确认当前路径在 start 文件夹下
-> pwd
-
-Path
-----
+> (pwd).Path
 C:\Users\ad\vimfiles\pack\plugins\start
 # 2. 复制 ctrlp.vim 的 GitHub 代码库
 > git clone https://github.com/ctrlpvim/ctrlp.vim.git
@@ -178,18 +169,12 @@ nerdtree
 
 ```powershell
 # 1. 检查当前所在路径
-> pwd
-
-Path
-----
+> (pwd).Path
 C:\Users\ad\vimfiles\pack\plugins\start
 # 2. 创建并进入 opt 文件夹，要求与 start 文件夹同级
 > mkdir ../opt | Out-Null
 > cd ../opt
-> pwd
-
-Path
-----
+> (pwd).Path
 C:\Users\ad\vimfiles\pack\plugins\opt
 # 3. 复制 tabular 对应的 GitHub 仓库
 > git clone https://github.com/godlygeek/tabular.git
@@ -225,6 +210,130 @@ tabular
 ![](../assets/46-8.png)
 
 **图 46-8：利用 tabular 实现更精细的对齐效果示意图**
+
+
+
+## 8 示例四：插件 easy-motion 的安装与用法
+
+`easy-motion` 插件是对 `Vim` 原生 `motion` 操作的功能增强，安装过程与 `NERDTree` 插件相同，这里不再展开。
+
+`GitHub` 仓库地址：`https://github.com/easymotion/vim-easymotion.git`
+
+完成安装后，打开某个示例文件如 `nav.txt` 后，按两次 `Leader` 键（即反斜杠键 <kbd>\\</kbd>） + 原生 `motion` 键即可启用该插件。例如，键入 <kbd>\\</kbd><kbd>\\</kbd><kbd>J</kbd> 将看到如下界面效果：
+
+![](../assets/46-9.png)
+
+**图 46-9：按两次 Leader 键 + J 键看到的界面效果截图**
+
+此时输入左侧红色的字符将快速定位到该字母所在的行。例如按 <kbd>E</kbd> 键将直接定位到第 11 行；此时再按 <kbd>\\</kbd><kbd>\\</kbd><kbd>K</kbd> 向上导航，则光标上方的行将同样出现快速导航字母：
+
+![](../assets/46-10.png)
+
+**图 46-10：按两次 Leader 键 + K 键看到的界面效果截图**
+
+同理，也可以快速定位到当前行的某个单词，例如按 <kbd>\\</kbd><kbd>\\</kbd><kbd>W</kbd>，将看到：
+
+![](../assets/46-11.png)
+
+**图 46-11：按两次 Leader 键 + W 键看到的界面效果截图**
+
+此时不仅可以实现同行单词的快速定位，下方各行的单词也能通过多个快捷键（黄色字符开头的组合键）快速定位。
+
+若要检索单个字符，可以用 <kbd>\\</kbd><kbd>\\</kbd><kbd>S</kbd>，然后输入想要检索的目标字符，例如大写的 `T`，按回车后将看到：
+
+![](../assets/46-12.png)
+
+**图 46-12：用 easy-motion 插件实现单个字符的检索截图**
+
+可以看到，所有大写的 `T` 字符都标注了快捷键以便定位。
+
+
+
+## 9 示例五：在其他包名下安装插件 vim-fugitive
+
+前面四个插件都安装在了同一个 `package` 包下，最后一个演示以插件 `vim-fugitive` 为例，演示在不同 `package` 包下插件的安装及使用。
+
+`vim-fugitive` 插件实现了 `Vim` 环境下对 `Git` 相关功能的集成。启用该插件后，用户可以直接在编辑器中执行 `Git` 命令并轻松管理代码库。
+
+假设该插件需要安装到一个名为 `git-stuff` 的新 `package` 包下，具体安装过程如下：
+
+```powershell
+# 1. Check current path
+> (pwd).Path
+C:\Users\ad\vimfiles\pack\plugins\start
+# 2. Make directory git-stuff/start recursively
+> mkdir -p ../../git-stuff/start | Out-Null
+> cd ../../git-stuff/start
+> (pwd).Path
+C:\Users\ad\vimfiles\pack\git-stuff\start
+# 3. Clone repo to install vim-fugitive plugin
+> git clone https://github.com/tpope/vim-fugitive.git
+Cloning into 'vim-fugitive'...
+remote: Enumerating objects: 9359, done.
+remote: Counting objects: 100% (2608/2608), done.
+remote: Compressing objects: 100% (165/165), done.
+remote: Total 9359 (delta 2483), reused 2447 (delta 2437), pack-reused 6751 (from 3)
+Receiving objects: 100% (9359/9359), 2.74 MiB | 486.00 KiB/s, done.
+Resolving deltas: 100% (4395/4395), done.
+> ls -n
+vim-fugitive
+# 4. Open the test file with Vim editor
+> vim vim-fugitive/README.markdown
+```
+
+此时将打开示例文件 `vim-fugitive/README.markdown`。输入 `:Git blame` + <kbd>Enter</kbd> 将启用该插件，执行与 `git blame` 同样效果的命令：
+
+![](../assets/46-13.png)
+
+**图 46-13：利用 Fugitive 插件实现在 Vim 中轻松运行各类 Git 命令（如 git blame 命令）**
+
+另外还需要注意的是，在 `Vim` 环境下，自动从不同的 `package` 包加载的 `Vim` 插件将同时生效。也就是说，此时按 <kbd>Ctrl</kbd> + <kbd>P</kbd> 将唤起 `ctrlp` 插件：
+
+![](../assets/46-14.png)
+
+**图 46-14：多个插件同时生效的编辑器效果截图（同时启用 Fugitive 与 ctrlp 插件）**
+
+
+
+## 10 Vim 插件的删除
+
+方法：直接删除插件文件夹即可。
+
+例如删除 `ctrlp` 插件：
+
+```powershell
+> cd ~/vimfiles/pack/plugins/start
+> (pwd).Path
+C:\Users\ad\vimfiles\pack\plugins\start
+> ls -n
+ctrlp.vim
+nerdtree
+vim-easymotion
+# Remove the ctrlp plugin:
+> rm -Recurse -Force ctrlp.vim
+> ls -n
+nerdtree
+vim-easymotion
+# Open Vim for verification
+> vim
+```
+
+打开 `Vim` 后输入 <kbd>Ctrl</kbd> + <kbd>P</kbd>，将不再弹出 `ctrlp` 插件的工作界面。
+
+
+
+## 11 本节要点回顾
+
+- `Vim` 插件旨在进一步增强 `Vim` 编辑器的原生功能，使其更容易操作；
+- 用谷歌或 **VimAwesome** 网站查找所需插件；
+- `package` 包可用于分组各 `Vim` 插件，包名自拟；
+- 要让 `Vim` 自动加载某插件，将其放到 `start` 文件夹即可；
+  - 路径格式：`{packpath}/pack/{package-name}/start/{plugin-name}`
+- 同理，若要手动加载某插件，放到对应的 `opt` 文件夹即可；
+  - 路径格式：`{packpath}/pack/{package-name}/opt/{plugin-name}`
+  - 加载命令：`:packadd {plugin-name}` 或 `:pa {plugin-name}` + <kbd>Enter</kbd>
+- 插件的具体安装使用 `Git`：`git clone https://github.com/{plugin-path}`
+- 插件的删除：直接删除该插件的文件夹即可。
 
 
 
