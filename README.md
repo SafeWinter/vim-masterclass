@@ -103,7 +103,7 @@ Status available：:heavy_check_mark: (Completed) | :hourglass_flowing_sand: (Wo
 | S08  |    :heavy_check_mark:    |                  Visual Mode                   |
 | S09  |    :heavy_check_mark:    | Vim Settings, Preferences, and Customizations  |
 | S10  |    :heavy_check_mark:    |            Vim Buffers and Windows             |
-| S11  | :hourglass_flowing_sand: |                  Vim Plugins                   |
-| S12  |      :orange_book:       | Vim Graphical User Interfaces: Gvim and MacVim |
+| S11  |    :heavy_check_mark:    |                  Vim Plugins                   |
+| S12  | :hourglass_flowing_sand: | Vim Graphical User Interfaces: Gvim and MacVim |
 | S13  |    :heavy_check_mark:    |                 Live Q&A Calls                 |
 
