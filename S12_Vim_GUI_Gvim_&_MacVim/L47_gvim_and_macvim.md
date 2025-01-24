@@ -152,7 +152,7 @@
 
 更多 `gVim` 字体设置方法，可以参考 `Vim` 的帮助文档：`:set gui` + <kbd>Enter</kbd>。
 
-> **DIY 拓展**
+> **DIY 拓展：设置为 Cascadia Mono PL 字体**
 >
 > 实测时发现，除了用 `hXX` 设置字号外，指定字体 `Cascadia Mono PL`、字号为 `13` 后，输入命令 `:set gfn?` + <kbd>Enter</kbd> 查看 `gfn` 最终取值为 `guifont=Cascadia_Mono_PL:h13:cANSI:qDRAFT`：
 >
