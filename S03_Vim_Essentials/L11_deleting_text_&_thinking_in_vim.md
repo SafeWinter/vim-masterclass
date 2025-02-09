@@ -31,13 +31,13 @@
 - 小写 <kbd>X</kbd> 相当于 <kbd>DL</kbd>，删除光标当前位置的字符；
 - 大写 <kbd>X</kbd> 则相当于 <kbd>DH</kbd>，删除紧挨光标前的那个字符。
 
-那么，<kbd>DJ</kbd> 和 <kbd>DH</kbd> 呢？由于 <kbd>J</kbd> 的移动量是从上一行到下一行（如下图所示），因此 <kbd>DJ</kbd> 是否只会删除图中选中的部分？
+那么，<kbd>DJ</kbd> 和 <kbd>DH</kbd> 呢？由于 <kbd>J</kbd> 的移动量是从上一行到下一行（如下图所示），因此 <kbd>DJ</kbd> **是否只会** 删除图中选中的部分？
 
 ![J key's motion](../assets/11-1.png)
 
 **图 11-1 J 键产生的光标位移效果**
 
-答案是否定的—— <kbd>DJ</kbd> 删除的是光标所在的 **一整行**，外加光标下面的那 **一整行**，如图 11-2 所示：
+### **答案是否定的** —— <kbd>DJ</kbd> 删除的是光标所在的 **一整行**，外加光标下面的那 **一整行**，如图 11-2 所示：
 
 ![press dj delete 2 rows instead of actual displacement of the J key](../assets/11-2.png)
 

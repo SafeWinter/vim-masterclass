@@ -1,7 +1,7 @@
 # L08 Essential Navigation Commands
 ---
 
-本节练习 Vim 浏览内容的基本操作。
+本节练习 `Vim` 浏览内容的基本操作。
 
 ## 1 光标的上下左右移动
 
@@ -11,7 +11,7 @@
 
 即便键盘上的四个方向键失灵，`H`、`J`、`K`、`L` 依然有效。应当熟悉 Vim 控制方向的方式，双手不离主键盘。
 
-记忆法：H在最左边，L最右，J似鱼钩，剩下K则向上
+记忆法：H 在最左边，L 最右，J 似鱼钩，剩下 K 则向上
 
 abcd
 
@@ -75,7 +75,7 @@ abcd
 
 ## 8 查看当前行统计信息
 
-组合键：<kbd>Ctrl</kbd><kbd>g</kbd>
+组合键：<kbd>Ctrl</kbd> + <kbd>G</kbd>
 
 ![Ctrl + g](../assets/8-2.png)
 
@@ -83,7 +83,7 @@ abcd
 
 缺点：不能实时刷新结果，需手动重算。
 
-改进：命令模式下启用 `ruler`：<kbd>:set ruler</kbd><kbd>Enter</kbd> 
+改进：命令模式下启用 `ruler`：`:set ruler` + <kbd>Enter</kbd> 
 
 实测效果：（支持状态信息实时更新）
 
@@ -106,3 +106,4 @@ abcd
 > - 启用：`:set [option_name]`
 > - 禁用：`:set no[option_name]`
 > - 切换：`:set [option_name]!`（开/关，取反操作，逻辑非）
+> - 查询当前状态：`:set [option_name]?`

@@ -13,7 +13,7 @@
 
 ### 1. 打开 nav.txt 文件
 
-打开本地命令行，用 vim 打开 `nav.txt` 文件：
+打开本地命令行，用 `Vim` 打开 `nav.txt` 文件：
 
 ```bash
 cd Downloads
@@ -127,7 +127,7 @@ This training is being provided by LinuxTrainingAcademy.com.
 
 
 
-### 7 退出 vim
+### 7 退出 Vim
 
 完成本节文件内容导航练习后，按 <kbd>:q!</kbd><kbd>Enter</kbd> 键退出。
 
