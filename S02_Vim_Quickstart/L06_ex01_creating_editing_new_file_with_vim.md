@@ -16,7 +16,7 @@
 
 ### 1 创建文件
 
-先在本地打开一个命令行会话，再用 Vim 编辑一个名为 `myday.txt` 的新文件。在命令行输入 `vim myday.txt`，按回车键 <kbd>Enter</kbd> 确认：
+先在本地打开一个命令行会话，再用 `Vim` 编辑一个名为 `myday.txt` 的新文件。在命令行输入 `vim myday.txt`，按回车键 <kbd>Enter</kbd> 确认：
 
 ```bash
 vim myday.txt
@@ -26,7 +26,7 @@ vim myday.txt
 
 ### 2 启用插入模式
 
-这样就打开了一个新文件，并处在 Vim 的常规模式（normal mode）下。按下小写的 <kbd>I</kbd> 键进入插入模式（insert mode）
+这样就打开了一个新文件，并处在 `Vim` 的常规模式（normal mode）下。按下小写的 <kbd>I</kbd> 键进入插入模式（insert mode）
 
 
 
@@ -50,7 +50,7 @@ vim myday.txt
 
 ### 6 验证文件已保存
 
-您可以通过查看文件内容来确认是否已经保存成功。比如使用 Vim 编辑器打开该文件：输入 `vim myday.txt` + <kbd>Enter</kbd> 即可：
+您可以通过查看文件内容来确认是否已经保存成功。比如使用 `Vim` 编辑器打开该文件：输入 `vim myday.txt` + <kbd>Enter</kbd> 即可：
 
 ```bash
 vim myday.txt
