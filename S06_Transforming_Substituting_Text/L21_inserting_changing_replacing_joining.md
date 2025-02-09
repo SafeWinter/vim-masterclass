@@ -75,7 +75,7 @@
 
 方法：光标定位到字母 `c`，按 <kbd>C</kbd><kbd>W</kbd> + `cat` + <kbd>Esc</kbd>
 
-发散：将 canine 同时存入寄存器 `"a`：输入 <kbd>"</kbd><kbd>A</kbd> + <kbd>C</kbd><kbd>W</kbd> + `cat` + <kbd>Esc</kbd>
+发散：将 `canine` 同时存入寄存器 `"a`：输入 <kbd>"</kbd><kbd>A</kbd> + <kbd>C</kbd><kbd>W</kbd> + `cat` + <kbd>Esc</kbd>
 
 
 

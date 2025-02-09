@@ -49,7 +49,7 @@ vim insert-practice.txt
 Enter your name here =><=
 ```
 
-为此，需要用 <kbd>F</kbd><kbd>></kbd> 定位到 `>` 字符下（注意：`f` 命令将在第 L23 课 Vim 文本检索中详细介绍，这里用于让光标快速定位到同一行的指定字符位置）。然后利用 `a` 命令从光标的后面进入插入模式。输入任意姓名，并按 <kbd>Escape</kbd> 键回到常规模式。
+为此，需要用 <kbd>F</kbd><kbd>></kbd> 定位到 `>` 字符下（注意：`f` 命令将在第 L23 课 `Vim` 文本检索中详细介绍，这里用于让光标快速定位到同一行的指定字符位置）。然后利用 `a` 命令从光标的后面进入插入模式。输入任意姓名，并按 <kbd>Escape</kbd> 键回到常规模式。
 
 
 
@@ -136,7 +136,7 @@ I have a white car.
 I have a white cat.
 ```
 
-先按 <kbd>2</kbd><kbd>J</kbd> 定位到下面这行文本，再用 <kbd>F</kbd><kbd>R</kbd> 将光标定位到单词 `car` 的 `r` 字符下（注意：`f` 命令将在第 L23 课 Vim 文本检索中详细介绍，这里用于让光标快速定位到同一行的指定字符位置）。接着按 <kbd>R</kbd> 键启用替换命令，然后输入字符 `t` 完成替换。 
+先按 <kbd>2</kbd><kbd>J</kbd> 定位到下面这行文本，再用 <kbd>F</kbd><kbd>R</kbd> 将光标定位到单词 `car` 的 `r` 字符下（注意：`f` 命令将在第 L23 课 `Vim` 文本检索中详细介绍，这里用于让光标快速定位到同一行的指定字符位置）。接着按 <kbd>R</kbd> 键启用替换命令，然后输入字符 `t` 完成替换。 
 
 
 
@@ -154,7 +154,7 @@ I am having a great time in this vim class!
 I am having a brilliant time in this vim class!
 ```
 
-先用 <kbd>/</kbd><kbd>G</kbd><kbd>R</kbd> + <kbd>Enter</kbd> 将光标定位到单词 `great` 的 `g` 字符下（注意：`/` 命令将在第 23 课 Vim 文本检索中详细介绍，这里仅用于将光标快速定位到 `great` 的 `g` 位置，支持跨行检索）。接着按 <kbd>C</kbd><kbd>W</kbd>（即 **c**hange **w**ord，更改单词），再输入单词 `brilliant` 完成变更。最后，按 <kbd>Escape</kbd> 键回到常规模式。
+先用 <kbd>/</kbd><kbd>G</kbd><kbd>R</kbd> + <kbd>Enter</kbd> 将光标定位到单词 `great` 的 `g` 字符下（注意：`/` 命令将在第 23 课 `Vim` 文本检索中详细介绍，这里仅用于将光标快速定位到 `great` 的 `g` 位置，支持跨行检索）。接着按 <kbd>C</kbd><kbd>W</kbd>（即 **c**hange **w**ord，更改单词），再输入单词 `brilliant` 完成变更。最后，按 <kbd>Escape</kbd> 键回到常规模式。
 
 接着，将下列句子中的 `myself.` 改为 `everyone!`：
 
@@ -168,7 +168,7 @@ I love myself.
 I love everyone!
 ```
 
-先将光标定位到 `myself` 的 `m` 字符上，可通过 `/my` + <kbd>Enter</kbd> 实现（注意：`/` 命令将在第 23 课 Vim 文本检索中详述，这里仅用于快速定位光标到指定位置，且支持跨行检索）。然后输入 `cW`，实现带标点更改单词；接着再输入 `everyone!` 即可。最后，按 <kbd>Escape</kbd> 键回到常规模式（注意：本例也可以通过 `c$` 或 `C` 命令实现与 `cW` 命令相同的效果）。
+先将光标定位到 `myself` 的 `m` 字符上，可通过 `/my` + <kbd>Enter</kbd> 实现（注意：`/` 命令将在第 23 课 `Vim` 文本检索中详述，这里仅用于快速定位光标到指定位置，且支持跨行检索）。然后输入 `cW`，实现带标点更改单词；接着再输入 `everyone!` 即可。最后，按 <kbd>Escape</kbd> 键回到常规模式（注意：本例也可以通过 `c$` 或 `C` 命令实现与 `cW` 命令相同的效果）。
 
 最后，试将下列一整行文字改为任意内容：
 
@@ -248,7 +248,7 @@ Please Whisper.
 Create a line of asterisks below:
 ```
 
-为此，先用 <kbd>3</kbd><kbd>J</kbd> 将光标定位到该行文本的下一行；然后输入 <kbd>8</kbd><kbd>0</kbd><kbd>I</kbd> 进入插入模式，拟重复执行 80 次；再键入 <kbd>\*</kbd> 插入星号。最后按 <kbd>Escape</kbd> 键切回常规模式，并查看 Vim 自动插入的 80 个星号效果。
+为此，先用 <kbd>3</kbd><kbd>J</kbd> 将光标定位到该行文本的下一行；然后输入 <kbd>8</kbd><kbd>0</kbd><kbd>I</kbd> 进入插入模式，拟重复执行 80 次；再键入 <kbd>\*</kbd> 插入星号。最后按 <kbd>Escape</kbd> 键切回常规模式，并查看 `Vim` 自动插入的 80 个星号效果。
 
 接着，再在下列文本行的下方三行，每行各插入一个连字符 `-`：
 
@@ -256,7 +256,7 @@ Create a line of asterisks below:
 Create 3 lines that begin with "-" below:
 ```
 
-为此，先用 <kbd>2</kbd><kbd>J</kbd> 定位到该行文本；然后使用 `o` 命令，键入 <kbd>3</kbd><kbd>O</kbd>，并在新行中输入一个连字符 <kbd>-</kbd>；最后按 <kbd>Escape</kbd> 键切回常规模式，并查看 Vim 自动生成的另两行效果。
+为此，先用 <kbd>2</kbd><kbd>J</kbd> 定位到该行文本；然后使用 `o` 命令，键入 <kbd>3</kbd><kbd>O</kbd>，并在新行中输入一个连字符 <kbd>-</kbd>；最后按 <kbd>Escape</kbd> 键切回常规模式，并查看 `Vim` 自动生成的另两行效果。
 
 
 
