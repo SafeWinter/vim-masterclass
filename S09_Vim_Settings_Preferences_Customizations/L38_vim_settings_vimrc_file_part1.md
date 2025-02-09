@@ -86,6 +86,7 @@
 | 开启 `hls` |  `:set hls`  |        `hlsearch`         |
 | 关闭 `hls` | `:set nohls` |       `nohlsearch`        |
 | 切换 `hls` | `:set hls!`  | `hlsearch` / `nohlsearch` |
+|  查询状态  | `:set hls?`  | `hlsearch` / `nohlsearch` |
 
 
 
