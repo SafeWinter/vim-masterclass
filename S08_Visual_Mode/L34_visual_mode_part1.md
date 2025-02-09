@@ -19,7 +19,10 @@
 
 1. 字符级（characterwise）可视化模式：通过 `v` 开启；
 2. 文本行（linewise）可视化模式：通过 `V` 开启；
-3. 区块级（blockwise）可视化模式：通过 <kbd>Ctrl</kbd> + <kbd>V</kbd> 开启（WSL 的 Ubuntu Vim 用的是 <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>V</kbd>；`Windows` 的 Vim 则用的是 <kbd>Ctrl</kbd> + <kbd>Q</kbd>）；
+3. 区块级（blockwise）可视化模式：通过 <kbd>Ctrl</kbd> + <kbd>V</kbd> 开启。实测后发现 ——
+   1. `WSL` 的 `Ubuntu` 版 `Vim`：用 <kbd>Ctrl</kbd> + <kbd>Alt</kbd> + <kbd>V</kbd>；
+   2. `Windows` 版 `Vim`：用 <kbd>Ctrl</kbd> + <kbd>Q</kbd>；
+
 
 可视化模式的退出：任意位置按 <kbd>Escape</kbd> 键。
 
@@ -204,7 +207,7 @@ class Person
 end
 ```
 
-实现方法：光标定位到 `nick_name` 首字符，按 <kbd>Ctrl</kbd> + <kbd>Q</kbd>（Windows 环境的 Vim）进入区块级可视化模式，并按 <kbd>3</kbd><kbd>J</kbd> 选中要变更的行，然后按 <kbd>Shift</kbd><kbd>I</kbd> 批量进入插入模式（和追加内容类似，这里仅支持大写的 `I` 进入插入模式，可视化模式下小写的 `i` 无效）。接着键入 <kbd>N</kbd>：
+实现方法：光标定位到 `nick_name` 首字符，按 <kbd>Ctrl</kbd> + <kbd>Q</kbd>（`Windows` 环境的 `Vim`）进入区块级可视化模式，并按 <kbd>3</kbd><kbd>J</kbd> 选中要变更的行，然后按 <kbd>Shift</kbd><kbd>I</kbd> 批量进入插入模式（和追加内容类似，这里仅支持大写的 `I` 进入插入模式，可视化模式下小写的 `i` 无效）。接着键入 <kbd>@</kbd>：
 
 ![](../assets/34-10.png)
 

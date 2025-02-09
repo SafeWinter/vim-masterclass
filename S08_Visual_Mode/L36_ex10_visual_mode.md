@@ -99,7 +99,7 @@ Description
 
 ### 2.4. 区块级可视化模式练习 Blockwise Visual Mode
 
-试用 Vim 的区块级可视化模式，对如下文字进行批量操作：
+试用 `Vim` 的区块级可视化模式，对如下文字进行批量操作：
 
 ```markdown
 Rank,Item
