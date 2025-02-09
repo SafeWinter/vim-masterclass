@@ -13,7 +13,7 @@
 
 ### 2.1 打开文件 help.txt
 
-打开一个本地命令行会话，使用 Vim 打开文件 `help.txt`（练习文件默认解压到 `Downloads` 文件夹下）：
+打开一个本地命令行会话，使用 `Vim` 打开文件 `help.txt`（练习文件默认解压到 `Downloads` 文件夹下）：
 
 ```shell
 cd Downloads
@@ -77,13 +77,13 @@ vim help.txt
 
 ### 2.5 亲自动手
 
-按下 <kbd>Ctrl</kbd> + <kbd>WW</kbd> 让光标再次回到 Vim 帮助窗口。回忆几个已经学过的命令，然后通过帮助系统查看其文档。用本节学到的知识尽情探索吧。
+按下 <kbd>Ctrl</kbd> + <kbd>WW</kbd> 让光标再次回到 `Vim` 帮助窗口。回忆几个已经学过的命令，然后通过帮助系统查看其文档。用本节学到的知识尽情探索吧。
 
 
 
 ### 2.6 结束练习
 
-完成练习，输入 `:q` + <kbd>Enter</kbd> 退出帮助系统；使用 `:q!` + <kbd>Enter</kbd> 停止文件编辑并退出 Vim。
+完成练习，输入 `:q` + <kbd>Enter</kbd> 退出帮助系统；使用 `:q!` + <kbd>Enter</kbd> 停止文件编辑并退出 `Vim`。
 
 
 
