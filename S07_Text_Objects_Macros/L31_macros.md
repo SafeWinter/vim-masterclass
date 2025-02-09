@@ -80,8 +80,6 @@
 
 `Vim` 宏录制的操作顺序最佳实践：
 
-创建Vim宏的最佳实践：
-
 1. 统一设置光标位置（Normalize the cursor position）
    1. 例如键入 <kbd>0</kbd>（即回零操作）
 2. 执行具体的编辑与相关操作（Perform edits and operations）
@@ -376,7 +374,7 @@ google.com has address:
 >
 > 需要特别注意的是，编辑过程中，诸如 <kbd>Escape</kbd>、<kbd>Enter</kbd> 这样的特殊符号，需要先输入 <kbd>Ctrl</kbd><kbd>V</kbd>，然后再键入相应的特殊按键，这样才能完成特殊符号的录入。千万不可直接手动输入 `^[` 或 `^M`，因为 `Vim` 无法正确解析。
 >
-> 如果是在 `Windows` 版的 `Vim` 插入模式输入特殊符号，则需要先输入 <kbd>Ctrl</kbd><kbd>Q</kbd>（否则用 <kbd>Ctrl</kbd><kbd>V</kbd> 会将剪切板中的内容粘贴到文件中），然后再键入特殊按键即可。
+> 如果是在 `Windows` 版的 `Vim` 插入模式输入特殊符号，则需要先输入 <kbd>Ctrl</kbd><kbd>Q</kbd>（否则用 <kbd>Ctrl</kbd><kbd>V</kbd> 只会将剪切板中的内容粘贴到文件中），然后再键入特殊按键即可。
 
 
 

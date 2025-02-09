@@ -79,7 +79,7 @@ This is a sentence comprised of many words.  This is another sentence. Just like
 
 ## 5 操作光标所在的整个段落
 
-在 `Vim` 中，一句话是以句点 `.` 结尾的；而一个段落则是用空行进行分隔的。段落对应的对象表示为 `p`，即段落的英文单词 `paragraph` 的首字母，相关操作如下（以 `d` 命令为例）：
+在 `Vim` 中，一句话是以句点 `.` 结尾的；而一个段落则是用 **空行** 进行分隔的。段落对应的对象表示为 `p`，即段落的英文单词 `paragraph` 的首字母，相关操作如下（以 `d` 命令为例）：
 
 - <kbd>D</kbd><kbd>A</kbd><kbd>P</kbd>：删除当前光标所在的一整段文本，以及该段落后面的空行。
 - <kbd>D</kbd><kbd>I</kbd><kbd>P</kbd>：仅删除当前光标所在的一整段文本，段落后面的空行不动。
