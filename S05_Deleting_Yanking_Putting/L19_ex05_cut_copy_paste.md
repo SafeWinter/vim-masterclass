@@ -13,7 +13,7 @@
 
 ### 2.1 打开 dyp.txt 文件
 
-用 Vim 打开源码包内的练习文件 `dyp.txt`（默认解压到 `Downloads` 文件夹下）：
+用 `Vim` 打开源码包内的练习文件 `dyp.txt`（默认解压到 `Downloads` 文件夹下）：
 
 ```bash
 cd Downloads
