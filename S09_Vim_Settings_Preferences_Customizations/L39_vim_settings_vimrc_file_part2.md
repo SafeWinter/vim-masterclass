@@ -76,7 +76,7 @@ map <F3> i<ul><CR><Space><Space><li></li><CR><Esc>0i</ul><Esc>kcit
 此时如果再定义一组按键操作（假设绑定到 <kbd>F4</kbd>），实现在下一行快速插入 `<li></li>`，并将光标定位到标签内部，则可以写作：
 
 ```markdown
-map <F4> <Esc><li></li><Esc>cit
+map <F4> <Esc>o<li></li><Esc>cit
 ```
 
 这样就可以组合 <kbd>F3</kbd> 和 <kbd>F4</kbd> 快速完成 HTML 代码段的编辑和插入，如图 39-4 所示：
